@@ -1,6 +1,6 @@
 <template>
 	<b-container class='nft-container pt-5' fluid>
-		<b-row class='m-auto mt-5 pt-5'>
+		<b-row class='m-auto mt-5 pt-2 pt-sm-5'>
 			<WelcomePage />
 			<Collection />
 			<OurMission />
