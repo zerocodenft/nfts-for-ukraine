@@ -1,8 +1,8 @@
 <template>
 	<div class='home-bg-frame'>
-		<Header class="nft-container"/>
+		<Header />
 		<Nuxt />
-		<Footer/>
+		<Footer />
 	</div>
 </template>
 <script>
@@ -22,6 +22,5 @@ export default {
 	background: url("~/assets/img/home/home-bg-frame.png") center no-repeat;
 	background-size: 100%;
 	background-position: top;
-	height: 4000px;
 }
 </style>

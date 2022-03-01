@@ -1,7 +1,11 @@
 <template>
-	<b-container class='nft-container' fluid>
-		<b-row class='m-auto'>
+	<b-container class='nft-container pt-5' fluid>
+		<b-row class='m-auto mt-5 pt-5'>
+			<WelcomePage />
 			<Collection />
+			<OurMission />
+			<Team />
+			<FAQ />
 		</b-row>
 	</b-container>
 </template>
@@ -15,16 +19,21 @@ console.info(
   font-weight:bold;`
 )
 console.groupEnd()
-
+import OurMission from "@/components/home/out-mission/OurMission";
 import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
-import { ethers } from 'ethers'
-
+import WelcomePage from '@/components/home/welcome-page/WelcomePage'
+import Team from '@/components/home/our-team/Team'
+import FAQ from "~/components/home/FAQ/FAQ";
 
 export default {
 	mixins: [MintMixin],
 	components: {
-		Collection
+		Team,
+		FAQ,
+		OurMission,
+		Collection,
+		WelcomePage,
 	},
 	data() {
 		return {
@@ -68,7 +77,3 @@ export default {
 	}
 }
 </script>
-
-<style lang='scss' scoped>
-
-</style>
