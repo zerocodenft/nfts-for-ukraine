@@ -1,37 +1,43 @@
 <template>
-	<b-container id="container" fluid>
-		<b-row id="landing" :style='{
-			"backgroundImage": `url("${$siteConfig.backgroundImageURL}")`,
-			"backgroundSize": "100% 100%"
-		}'>
-			<b-col
-				class="d-flex align-items-center justify-content-center backdrop-blur">
-				<b-jumbotron
-					:header="$siteConfig.title"
-					class="shadow text-center"
-					:lead="$siteConfig.description"
-					bg-variant="dark"
-					text-variant="white">
-					<div v-if="showCountdown">
-						<Countdown :date="$siteConfig.dropDate" />
-					</div>
-					<div v-else>
-						<h4 class="pt-2 text-light">
-							Minted: {{ mintedCount }}/{{ collectionSize }}
-						</h4>
-						<b-form-spinbutton
-							class="mx-auto my-3"
-							v-model="count"
-							min="1"
-							:max="$siteConfig.smartContract.maxTokensPerTransaction || $siteConfig.smartContract.collectionSize"
-						>
-						</b-form-spinbutton>
-						<MintButton :mintCount="count" :soldOut="mintedCount === collectionSize" @minted="onMinted" />
-					</div>
-				</b-jumbotron>
-			</b-col>
-		</b-row>
-	</b-container>
+<!--	<b-container id='container' fluid>-->
+<!--		<b-row id='landing' :style='{-->
+<!--			"backgroundImage": `url("${$siteConfig.backgroundImageURL}")`,-->
+<!--			"backgroundSize": "100% 100%"-->
+<!--		}'>-->
+<!--			<b-col-->
+<!--				class='d-flex align-items-center justify-content-center backdrop-blur'>-->
+<!--				<b-jumbotron-->
+<!--					:header='$siteConfig.title'-->
+<!--					class='shadow text-center'-->
+<!--					:lead='$siteConfig.description'-->
+<!--					bg-variant='dark'-->
+<!--					text-variant='white'>-->
+<!--					<div v-if='showCountdown'>-->
+<!--						<Countdown :date='$siteConfig.dropDate' />-->
+<!--					</div>-->
+<!--					<div v-else>-->
+<!--						<h4 class='pt-2 text-light'>-->
+<!--							Minted: {{ mintedCount }}/{{ collectionSize }}-->
+<!--						</h4>-->
+<!--						<b-form-spinbutton-->
+<!--							class='mx-auto my-3'-->
+<!--							v-model='count'-->
+<!--							min='1'-->
+<!--							:max='$siteConfig.smartContract.maxTokensPerTransaction || $siteConfig.smartContract.collectionSize'-->
+<!--						>-->
+<!--						</b-form-spinbutton>-->
+<!--						<MintButton :mintCount='count' :soldOut='mintedCount === collectionSize' @minted='onMinted' />-->
+<!--					</div>-->
+<!--				</b-jumbotron>-->
+<!--			</b-col>-->
+<!--		</b-row>-->
+<!--	</b-container>-->
+		<b-container class='nft-container' fluid>
+			<b-row class='d-flex justify-content-center m-auto'>
+				<Header />
+				<Footer />
+			</b-row>
+		</b-container>
 </template>
 
 <script>
@@ -56,34 +62,34 @@ export default {
 			collectionSize: 0
 		}
 	},
-	
-	mounted() {
-		const {
-			chainId: targetChainId,
-			abi,
-			address,
-			collectionSize,
-		} = this.$siteConfig.smartContract
 
-		this.collectionSize = collectionSize
-
-		try {
-			// give some time for wallet plugin to init
-			setTimeout(async () => {
-				if (this.showCountdown || !this.$wallet.provider) return
-
-				if (this.$wallet.chainId !== +targetChainId) {
-					await this.$wallet.switchNetwork(targetChainId)
-				}
-
-				const nftContract = new ethers.Contract(address, abi, this.$wallet.provider)
-				this.mintedCount = +(await nftContract.totalSupply())
-				this.collectionSize = +(await nftContract.COLLECTION_SIZE())
-			}, 2000)
-		} catch (err) {
-			console.error({ err })
-		}
-	},
+	// mounted() {
+	// 	const {
+	// 		chainId: targetChainId,
+	// 		abi,
+	// 		address,
+	// 		collectionSize
+	// 	} = this.$siteConfig.smartContract
+	//
+	// 	this.collectionSize = collectionSize
+	//
+	// 	try {
+	// 		// give some time for wallet plugin to init
+	// 		setTimeout(async () => {
+	// 			if (this.showCountdown || !this.$wallet.provider) return
+	//
+	// 			if (this.$wallet.chainId !== +targetChainId) {
+	// 				await this.$wallet.switchNetwork(targetChainId)
+	// 			}
+	//
+	// 			const nftContract = new ethers.Contract(address, abi, this.$wallet.provider)
+	// 			this.mintedCount = +(await nftContract.totalSupply())
+	// 			this.collectionSize = +(await nftContract.COLLECTION_SIZE())
+	// 		}, 2000)
+	// 	} catch (err) {
+	// 		console.error({ err })
+	// 	}
+	// },
 	methods: {
 		onMinted(val) {
 			this.mintedCount = val
@@ -92,17 +98,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-#container {
-	overflow: hidden;
-	min-height: calc(100vh - 164px);
-}
+<style lang='scss' scoped>
 
-#landing {
-	min-height: inherit;
-}
-
-.backdrop-blur {
-	backdrop-filter: blur(1px);
-}
 </style>

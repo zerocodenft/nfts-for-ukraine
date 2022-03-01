@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import MintMixin from '@/mixins/mint'
-import { SALE_STATUS, getMerkeTree } from '@/utils'
+import MintMixin from '~/mixins/mint'
+import { SALE_STATUS, getMerkeTree } from '~/utils'
 import { ethers } from 'ethers'
 
 export default {
@@ -97,7 +97,7 @@ export default {
 				const total = this.$props.mintCount * buyPrice
 				const value = ethers.utils.parseEther(total.toString())
 
-				console.log({ 
+				console.log({
 					buyPrice,
 					total,
 					value
