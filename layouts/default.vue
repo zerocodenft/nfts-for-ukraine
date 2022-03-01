@@ -1,8 +1,8 @@
 <template>
-	<div>
-		<Header class='metazoid-container' />
+	<div class='home-bg-frame'>
+		<Header/>
 		<Nuxt />
-		<Footer class='metazoid-container' />
+		<Footer/>
 	</div>
 </template>
 <script>
@@ -17,3 +17,11 @@ export default {
 	}
 }
 </script>
+<style lang='scss'>
+.home-bg-frame {
+	background: url("~/assets/img/home/home-bg-frame.png") center no-repeat;
+	background-size: 100%;
+	background-position: top;
+	height: 4000px;
+}
+</style>
