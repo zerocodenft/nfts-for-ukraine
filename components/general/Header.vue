@@ -52,49 +52,49 @@ export default {
 <style lang="scss">
 //@import "../../assets/scss/variables";
 //@import "../../assets/scss/mixins";
-//.navbar__wrapper {
-//	&__content {
-//		.navbar-brand {
-//			outline: none !important;
-//		}
-//		&__links {
-//			&-link {
-//				@include fonts(normal, 400, clamp(.4rem,.7vw,.625rem), ('Press Start 2P', cursive) );
-//				line-height: 1rem;
-//				text-align: center;
-//				margin: 0 1rem;
-//				color: #96939D !important;
-//				position: relative;
-//				.nav-link:focus {
-//					outline: none !important;
-//				}
-//				&:hover {
-//					color: #fff;
-//
-//					&::before {
-//						content: '';
-//						width: 100%;
-//						height: 0.125rem;
-//						background-color: $background-btn;
-//						position: absolute;
-//						left: 0;
-//						top: 2rem;
-//					}
-//				}
-//			}
-//		}
-//		&__socials {
-//			&-link {
-//				width: 2.5rem;
-//				height: 2.5rem;
-//				border: 0.0625rem solid $background-btn;
-//
-//				&:hover {
-//					background-color: rgba(255,255,255,.1);
-//					border: 0.0625rem solid rgba(131, 255, 140, 0.62);
-//				}
-//			}
-//		}
-//	}
-//}
+.navbar__wrapper {
+	&__content {
+		.navbar-brand {
+			outline: none !important;
+		}
+		&__links {
+			&-link {
+				//@include fonts(normal, 400, clamp(.4rem,.7vw,.625rem), ('Press Start 2P', cursive) );
+				line-height: 1rem;
+				text-align: center;
+				margin: 0 1rem;
+				color: #96939D !important;
+				position: relative;
+				.nav-link:focus {
+					outline: none !important;
+				}
+				&:hover {
+					color: #fff;
+
+					&::before {
+						content: '';
+						width: 100%;
+						height: 0.125rem;
+						//background-color: $background-btn;
+						position: absolute;
+						left: 0;
+						top: 2rem;
+					}
+				}
+			}
+		}
+		&__socials {
+			&-link {
+				width: 2.5rem;
+				height: 2.5rem;
+				//border: 0.0625rem solid $background-btn;
+
+				&:hover {
+					background-color: rgba(255,255,255,.1);
+					border: 0.0625rem solid rgba(131, 255, 140, 0.62);
+				}
+			}
+		}
+	}
+}
 </style>

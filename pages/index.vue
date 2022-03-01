@@ -1,43 +1,11 @@
 <template>
-<!--	<b-container id='container' fluid>-->
-<!--		<b-row id='landing' :style='{-->
-<!--			"backgroundImage": `url("${$siteConfig.backgroundImageURL}")`,-->
-<!--			"backgroundSize": "100% 100%"-->
-<!--		}'>-->
-<!--			<b-col-->
-<!--				class='d-flex align-items-center justify-content-center backdrop-blur'>-->
-<!--				<b-jumbotron-->
-<!--					:header='$siteConfig.title'-->
-<!--					class='shadow text-center'-->
-<!--					:lead='$siteConfig.description'-->
-<!--					bg-variant='dark'-->
-<!--					text-variant='white'>-->
-<!--					<div v-if='showCountdown'>-->
-<!--						<Countdown :date='$siteConfig.dropDate' />-->
-<!--					</div>-->
-<!--					<div v-else>-->
-<!--						<h4 class='pt-2 text-light'>-->
-<!--							Minted: {{ mintedCount }}/{{ collectionSize }}-->
-<!--						</h4>-->
-<!--						<b-form-spinbutton-->
-<!--							class='mx-auto my-3'-->
-<!--							v-model='count'-->
-<!--							min='1'-->
-<!--							:max='$siteConfig.smartContract.maxTokensPerTransaction || $siteConfig.smartContract.collectionSize'-->
-<!--						>-->
-<!--						</b-form-spinbutton>-->
-<!--						<MintButton :mintCount='count' :soldOut='mintedCount === collectionSize' @minted='onMinted' />-->
-<!--					</div>-->
-<!--				</b-jumbotron>-->
-<!--			</b-col>-->
-<!--		</b-row>-->
-<!--	</b-container>-->
+	<div>
 		<b-container class='nft-container' fluid>
 			<b-row class='d-flex justify-content-center m-auto'>
-				<Header />
-				<Footer />
+				1111
 			</b-row>
 		</b-container>
+	</div>
 </template>
 
 <script>
@@ -52,6 +20,7 @@ console.groupEnd()
 
 import MintMixin from '@/mixins/mint'
 import { ethers } from 'ethers'
+
 
 export default {
 	mixins: [MintMixin],
