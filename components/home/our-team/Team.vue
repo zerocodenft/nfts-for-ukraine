@@ -6,7 +6,7 @@
 			</template>
 		</BlockHeader>
 		<div class='team__list'>
-			<Member v-for='i in 5' :key='i'/>
+			<Member v-for='(member, index) in listMembers' :key='index' :member='member' />
 		</div>
 	</div>
 </template>
@@ -20,6 +20,42 @@ export default {
 	components: {
 		Member,
 		BlockHeader
+	},
+	data(){
+		return{
+			listMembers: [
+				{
+					firstName: 'First',
+					lastName: 'Last',
+					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'First',
+					lastName: 'Last',
+					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
+					rotate: '-1'
+				},
+				{
+					firstName: 'First',
+					lastName: 'Last',
+					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
+					rotate: '-7'
+				},
+				{
+					firstName: 'First',
+					lastName: 'Last',
+					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
+					rotate: '8.5'
+				},
+				{
+					firstName: 'First',
+					lastName: 'Last',
+					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
+					rotate: '-2.2'
+				}
+			]
+		}
 	}
 }
 </script>

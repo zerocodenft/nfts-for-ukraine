@@ -1,24 +1,24 @@
 <template>
 	<div class='member d-flex flex-column align-items-center'>
 		<div class='member__img'>
-			<img :src='require("@/assets/img/home/team/member.png")' alt='member'/>
+			<img :style="`transform: rotate(${member.rotate}deg)`" :src='require("@/assets/img/home/team/member.png")' alt='member'/>
 		</div>
 		<div class='member__full-name'>
-			First Last
+			{{ member.firstName }} {{ member.lastName }}
 		</div>
-		<div class='member__about'>
-			Lorem ipsum saran tiopasc
-			Lorem ipsum saran tiopasc
-			Lorem ipsum saran tiopasc
-			Lorem ipsum saran tiopasc
-			Lorem ipsum saran tiopasc
-		</div>
+		<div class='member__about'>{{ member.about }}</div>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'Member'
+	name: 'Member',
+	props: {
+		member: {
+			type: Object,
+			default: () => {},
+		}
+	}
 }
 </script>
 
@@ -31,6 +31,7 @@ export default {
 	}
 	&__about {
 		margin-top: 1rem;
+		text-align: center;
 		@include fonts(normal, 400, 1rem, 'Neue Machina-normal');
 	}
 }
