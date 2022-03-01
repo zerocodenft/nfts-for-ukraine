@@ -1,18 +1,18 @@
 <template>
-	<div class='welcome-page d-flex w-100 align-items-center justify-content-around'>
+	<div class='welcome-page d-flex flex-md-row flex-column-reverse w-100 align-items-center justify-content-around'>
 		<div class='welcome-page__text d-flex flex-column'>
 			<div class='welcome-page__text--title'>
 				Stop russian aggressor.<br />
 				Get your NFT.
 			</div>
 			<div class='welcome-page__text--sub-title'>Unique NFT collection made for Ukraine by Ukrainians</div>
-			<div class='welcome-page__actions d-flex'>
+			<div class='welcome-page__actions d-flex justify-content-md-start justify-content-between'>
 				<b-button class='brand-button' size='lg' variant='dark'>Buy NFT</b-button>
 				<b-button class='brand-button--outlined' size='lg' variant='outline-dark'>Partner with Us</b-button>
 			</div>
 		</div>
 		<div>
-			<img :src='require("@/assets/img/card.svg")' alt='welcome-cards' />
+			<img class='welcome-page__image' :src='require("@/assets/img/card.svg")' alt='welcome-cards' />
 		</div>
 	</div>
 </template>
@@ -28,11 +28,19 @@ export default {
 
 .welcome-page {
 	gap: 1.75rem;
-	padding: 6rem 0;
+	padding-bottom: 6rem;
+	&__image{
+		@media(max-width: 600px){
+			width: 150px;
+		}
+	}
 	&__text {
 		&--title {
 			@include fonts(normal, 800, 4rem, 'Neue Machina-800');
 			text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+			@media(max-width: 600px){
+				font-size: clamp(1rem, 10vw, 2rem);
+			}
 		}
 
 		&--sub-title {
