@@ -1,6 +1,6 @@
 <template>
-	<b-container class='nft-container' fluid>
-		<b-row class='m-auto'>
+	<b-container class='nft-container pt-5' fluid>
+		<b-row class='m-auto mt-5 pt-5'>
 			<Collection />
 		</b-row>
 	</b-container>
@@ -18,7 +18,6 @@ console.groupEnd()
 
 import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
-import { ethers } from 'ethers'
 
 
 export default {

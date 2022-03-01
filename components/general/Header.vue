@@ -1,13 +1,13 @@
 <template>
-	<div class="pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden position-relative">
-		<b-navbar class="header p-0 pb-4 z-index-1 m-0 w-100 d-flex align-items-center" toggleable="lg" type="dark" variant="">
+	<div class="header z-index-1 position-fixed w-100 pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
+		<b-navbar class="header__container p-0 pb-4 z-index-1 m-0 w-100 d-flex align-items-center" toggleable="lg" type="dark" variant="">
 			<b-navbar-brand to="/preview">
 				<div class="header__brand mr-xl-5">
 					NFT UA
 				</div>
 			</b-navbar-brand>
-			<b-navbar-toggle target="nav-collapse" class='order-2'></b-navbar-toggle>
-			<b-collapse id="nav-collapse" class="order-md-1 order-2 justify-content-between align-items-center" is-nav>
+			<b-navbar-toggle target="nav-collapse" class=''></b-navbar-toggle>
+			<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
 				<b-navbar-nav class=" d-flex justify-content-center align-items-center">
 					<b-nav-item class="header__link shadow-none text-nowrap" to="/#home">Collection</b-nav-item>
 					<b-nav-item class="header__link shadow-none text-nowrap" to="/#about-project">Our mission</b-nav-item>
@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import {BCollapse, BLink, BNavbar, BNavbarBrand, BNavItem} from "bootstrap-vue";
 
 export default {
 	methods: {
@@ -45,7 +44,11 @@ export default {
 <style lang="scss">
 @import "assets/scss/main";
 .header {
-	border-bottom: $dark 2px solid;
+	background: url("../../assets/img/header-bg-frame.svg");
+
+	&__container {
+		border-bottom: $dark 2px solid;
+	}
 
 	&__link {
 		.nav-link {
