@@ -3,7 +3,7 @@
 		<b-row class='m-auto mt-5 pt-5'>
 			<WelcomePage />
 			<Collection />
-			1111
+			<Team />
 		</b-row>
 	</b-container>
 </template>
@@ -20,11 +20,13 @@ console.groupEnd()
 
 import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
-import WelcomePage from '@/components/general/WelcomePage'
+import WelcomePage from '@/components/home/welcome-page/WelcomePage'
+import Team from '@/components/home/our-team/Team'
 
 export default {
 	mixins: [MintMixin],
 	components: {
+		Team,
 		Collection,
 		WelcomePage,
 	},
