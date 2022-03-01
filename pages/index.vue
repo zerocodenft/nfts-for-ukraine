@@ -2,6 +2,8 @@
 	<b-container class='nft-container' fluid>
 		<b-row class='m-auto'>
 			<Collection />
+			<WelcomePage />
+			1111
 		</b-row>
 	</b-container>
 </template>
@@ -19,12 +21,13 @@ console.groupEnd()
 import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
 import { ethers } from 'ethers'
-
+import WelcomePage from '@/components/general/WelcomePage'
 
 export default {
 	mixins: [MintMixin],
 	components: {
-		Collection
+		Collection,
+		WelcomePage,
 	},
 	data() {
 		return {
