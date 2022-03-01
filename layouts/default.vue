@@ -2,7 +2,7 @@
 	<div class='home-bg-frame'>
 		<Header class="nft-container"/>
 		<Nuxt />
-		<Footer/>
+		<Footer />
 	</div>
 </template>
 <script>
