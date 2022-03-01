@@ -59,5 +59,8 @@ export default {
 		line-height: 2.3rem;
 		@include fonts(normal, 800, 2.5rem, "Neue Machina-bold")
 	}
+	.navbar-toggler {
+		background: $brand-primary;
+	}
 }
 </style>
