@@ -11,10 +11,12 @@
 
 <script>
 import BlockHeader from '@/components/general/BlockHeader'
+import CollectionItem from './CollectionItem'
 export default {
 	name: 'Collection',
 	components: {
-		BlockHeader
+		BlockHeader,
+		CollectionItem
 	}
 }
 </script>
