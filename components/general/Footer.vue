@@ -66,11 +66,11 @@ export default {
 //	&__verified-btn {
 //		height: 3.125rem;
 //		width: 11.8rem;
-//		font-size: .75rem;
+//		NeueMachine-size: .75rem;
 //	}
 //
 //	&__terms {
-//		font-size: .75rem;
+//		NeueMachine-size: .75rem;
 //		line-height: 1.25rem;
 //		color: rgba(255, 255, 255, 0.9);
 //	}
