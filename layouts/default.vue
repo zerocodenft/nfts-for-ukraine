@@ -19,8 +19,7 @@ export default {
 </script>
 <style lang='scss'>
 .home-bg-frame {
-	background: url("~/assets/img/home/home-bg-frame.png") center no-repeat;
-	background-size: 100%;
-	background-position: top;
+	background: url("~/assets/img/home/home-bg-frame.png") top no-repeat;
+	background-size: 100% 100%;
 }
 </style>
