@@ -1,10 +1,8 @@
 <template>
-	<div class="pb-4">
-		<div class="text-center text-white mb-5">
-			<div class="title font-pres d-flex flex-column pb-3 pt-140">
-				<span class="icon"></span>
-				<slot name="title"></slot>
-			</div>
+	<div>
+		<div class='d-flex'>
+			<b-img src='@/assets/img/arrow.svg'/>
+			<slot name="title"></slot>
 		</div>
 	</div>
 </template>

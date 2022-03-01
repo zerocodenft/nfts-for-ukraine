@@ -1,7 +1,7 @@
 <template>
 	<b-container class='nft-container' fluid>
-		<b-row class='d-flex justify-content-center m-auto'>
-			1111
+		<b-row class='m-auto'>
+			<Collection />
 		</b-row>
 	</b-container>
 </template>
@@ -16,12 +16,16 @@ console.info(
 )
 console.groupEnd()
 
+import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
 import { ethers } from 'ethers'
 
 
 export default {
 	mixins: [MintMixin],
+	components: {
+		Collection
+	},
 	data() {
 		return {
 			count: 1,
