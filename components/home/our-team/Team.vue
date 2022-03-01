@@ -27,6 +27,7 @@ export default {
 <style scoped lang='scss'>
 .team {
 	gap: 3rem;
+	margin-top: 5.6rem;
 	&__list{
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
