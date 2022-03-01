@@ -3,6 +3,7 @@
 		<b-row class='m-auto mt-5 pt-5'>
 			<WelcomePage />
 			<Collection />
+			<OurMission />
 			<Team />
 		</b-row>
 	</b-container>
@@ -17,7 +18,7 @@ console.info(
   font-weight:bold;`
 )
 console.groupEnd()
-
+import OurMission from "@/components/home/out-mission/OurMission";
 import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
 import WelcomePage from '@/components/home/welcome-page/WelcomePage'
@@ -27,6 +28,7 @@ export default {
 	mixins: [MintMixin],
 	components: {
 		Team,
+		OurMission,
 		Collection,
 		WelcomePage,
 	},
