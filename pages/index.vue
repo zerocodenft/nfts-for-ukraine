@@ -1,11 +1,9 @@
 <template>
-	<div>
-		<b-container class='nft-container' fluid>
-			<b-row class='d-flex justify-content-center m-auto'>
-				1111
-			</b-row>
-		</b-container>
-	</div>
+	<b-container class='nft-container' fluid>
+		<b-row class='d-flex justify-content-center m-auto'>
+			1111
+		</b-row>
+	</b-container>
 </template>
 
 <script>
