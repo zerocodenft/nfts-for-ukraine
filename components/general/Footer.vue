@@ -1,6 +1,6 @@
 <template>
 	<footer class='nft-container footer my-5 w-100'>
-		<div class='footer__border d-flex justify-content-between'>
+		<div class='footer__border d-flex justify-content-between align-items-center'>
 			Copyright 2022 NFT UA. Made with love by ukrainians in USA.
 			Terms & Conditions
 			<div class='footer__actions d-flex align-items-center'>
@@ -31,7 +31,7 @@ export default {
 	@include fonts(normal, 400, 1rem, 'Neue Machina-normal');
 
 	&__border {
-		padding-top: 2.5rem;
+		padding: 2.5rem 0 2rem;
 		border-top: 2px solid black;
 	}
 
