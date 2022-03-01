@@ -68,6 +68,12 @@ export default {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		gap: 3.5rem;
+		@media(max-width: 879px){
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media(max-width: 600px){
+			grid-template-columns: 1fr
+		}
 	}
 }
 </style>
