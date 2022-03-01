@@ -6,7 +6,8 @@
 				Get your NFT.
 			</div>
 			<div class='welcome-page__text--sub-title'>Unique NFT collection made for Ukraine by Ukrainians</div>
-			<div class='welcome-page__actions d-flex justify-content-md-start justify-content-between flex-column flex-sm-row'>
+			<div
+				class='welcome-page__actions d-flex justify-content-md-start justify-content-between flex-column flex-sm-row'>
 				<b-button class='brand-button' size='lg' variant='dark'>Buy NFT</b-button>
 				<b-button class='brand-button--outlined' size='lg' variant='outline-dark'>Partner with Us</b-button>
 			</div>
@@ -29,16 +30,18 @@ export default {
 .welcome-page {
 	gap: 1.75rem;
 	padding-bottom: 6rem;
-	&__image{
-		@media(max-width: 600px){
+
+	&__image {
+		@media(max-width: 600px) {
 			width: 200px;
 		}
 	}
+
 	&__text {
 		&--title {
 			@include fonts(normal, 800, 4rem, 'Neue Machina-800');
 			text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-			@media(max-width: 600px){
+			@media(max-width: 600px) {
 				font-size: clamp(1rem, 10vw, 2rem);
 				text-align: center;
 			}
@@ -48,12 +51,16 @@ export default {
 			margin: 2.5rem 0;
 			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 			@include fonts(normal, 400, 1.25rem, 'Neue Machina-normal');
+			@media(max-width: 600px) {
+				text-align: center;
+			}
 		}
 	}
+
 	&__actions {
 		gap: 2rem;
 		@include fonts(normal, 800, 1rem, 'Neue Machina-800');
-		@media(max-width: 600px){
+		@media(max-width: 600px) {
 			gap: 1rem;
 			button {
 				height: 60px;

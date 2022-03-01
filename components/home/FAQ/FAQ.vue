@@ -6,7 +6,7 @@
 			</template>
 		</BlockHeader>
 
-		<div class='faq pl-2'>
+		<div class='faq pl-xs-2'>
 			<div
 				class='mt-3 faq__item'
 				v-for='(question, index) in questions'

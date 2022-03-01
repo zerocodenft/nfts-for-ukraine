@@ -6,7 +6,7 @@
 			</template>
 		</BlockHeader>
 
-		<div class="ml-5 pl-2 pt-2">
+		<div class="ml-sx-5 pl-2 pt-2">
 			<div class="content__header mb-3">
 				We here to save lives
 			</div>
