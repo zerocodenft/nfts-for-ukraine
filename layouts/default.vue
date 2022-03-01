@@ -1,6 +1,6 @@
 <template>
 	<div class='home-bg-frame'>
-		<Header/>
+		<Header class="nft-container"/>
 		<Nuxt />
 		<Footer/>
 	</div>
