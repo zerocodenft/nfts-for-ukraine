@@ -1,5 +1,5 @@
 <template>
-	<div class="header z-index-1 position-fixed w-100 pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
+	<div class="nft-container header w-100 z-index-1 position-sticky pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
 		<b-navbar class="header__container p-0 pb-4 z-index-1 m-0 w-100 d-flex align-items-center" toggleable="lg" type="dark" variant="">
 			<b-navbar-brand to="/preview">
 				<div class="header__brand mr-xl-5">
@@ -45,7 +45,7 @@ export default {
 @import "assets/scss/main";
 .header {
 	background: url("../../assets/img/header-bg-frame.svg");
-
+	top: 0;
 	&__container {
 		border-bottom: $dark 2px solid;
 	}
