@@ -2,7 +2,7 @@
 @import 'utilites';
 @import 'mixins';
 @import 'reset';
-@import '../fonts/NeueMachine/fontface.css';
+@import '@/assets/fonts/NeueMachine/fontface.css';
 html {
 	scroll-behavior: smooth;
 }
@@ -11,6 +11,7 @@ body {
 	padding: 0;
 	font-size: 1rem;
 	scroll-behavior: smooth;
+	font-family: 'Neue Machina-bold';
 }
 .nft-container {
 	padding: 0 6%;
