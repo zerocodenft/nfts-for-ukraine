@@ -5,19 +5,22 @@
 				<span class='d-flex text-black align-items-center pl-2'>COLLECTION</span>
 			</template>
 		</BlockHeader>
+		<CollectionItem />
 	</div>
 </template>
 
 <script>
 import BlockHeader from '@/components/general/BlockHeader'
+import CollectionItem from '@/components/home/collection/CollectionItem'
 export default {
 	name: 'Collection',
 	components: {
-		BlockHeader
+		BlockHeader,
+		CollectionItem
 	}
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
