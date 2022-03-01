@@ -1,5 +1,5 @@
 <template>
-	<div class='welcome-page d-flex flex-md-row flex-column-reverse w-100 align-items-center justify-content-around'>
+	<div id="welcome-page" class='welcome-page d-flex flex-md-row flex-column-reverse w-100 align-items-center justify-content-around'>
 		<div class='welcome-page__text d-flex flex-column'>
 			<div class='welcome-page__text--title'>
 				Stop russian aggressor.<br />

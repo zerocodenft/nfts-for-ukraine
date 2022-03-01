@@ -2,10 +2,10 @@
 	<b-container class='nft-container pt-5' fluid>
 		<b-row class='m-auto mt-5 pt-2 pt-sm-5'>
 			<WelcomePage />
-			<Collection />
-			<OurMission />
-			<Team />
-			<FAQ />
+			<Collection id="collection" />
+			<OurMission id="our-mission" />
+			<Team id="team" />
+			<FAQ id="faq" />
 		</b-row>
 	</b-container>
 </template>
