@@ -16,7 +16,7 @@
 					<b-nav-item class="header__link shadow-none text-nowrap" to="/#our-team">FAQ</b-nav-item>
 				</b-navbar-nav>
 				<div class="d-flex justify-content-center z-index-1 order-1">
-					<b-button class="brand-button d-flex align-items-center justify-content-center">Partner with us</b-button>
+					<b-button class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
 				</div>
 			</b-collapse>
 		</b-navbar>
@@ -54,7 +54,7 @@ export default {
 		.nav-link {
 			color: $dark !important;
 			line-height: 1.2rem;
-			@include fonts(normal, 300, 1.25rem, "Neue Machina")
+			@include fonts(normal, 300, 1.25rem, "Neue Machina-300")
 		}
 	}
 	&__brand {

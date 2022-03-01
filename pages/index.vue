@@ -3,12 +3,14 @@
 		<b-row class='m-auto mt-5 pt-5'>
 			<WelcomePage />
 			<Collection />
+			<OurMission />
 			1111
 		</b-row>
 	</b-container>
 </template>
 
 <script>
+import OurMission from "~/components/home/out-mission/OurMission";
 console.group('Powered by www.zerocodenft.com')
 console.info(
 	'%cDrop Your NFT collection with ZERO coding skills!',
@@ -25,6 +27,7 @@ import WelcomePage from '@/components/general/WelcomePage'
 export default {
 	mixins: [MintMixin],
 	components: {
+		OurMission,
 		Collection,
 		WelcomePage,
 	},
