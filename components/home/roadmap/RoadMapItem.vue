@@ -26,7 +26,7 @@
 		<b-img
 			v-if="!left"
 			width="160"
-			class="order-0 order-md-1 mr-3"
+			class="order-0 order-md-1"
 			:src="require(`@/assets/img/home/roadmap/${img}`)"
 			alt="black block"
 		/>

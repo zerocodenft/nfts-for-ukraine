@@ -1,5 +1,5 @@
 <template>
-	<div class='team w-100 d-flex flex-column'>
+	<b-col cols="12" class='team'>
 		<BlockHeader>
 			<template #title>
 				<span class='d-flex text-black align-items-center pl-2'>OUR TEAM</span>
@@ -8,7 +8,7 @@
 		<div class='team__list'>
 			<Member v-for='(member, index) in listMembers' :key='index' :member='member' />
 		</div>
-	</div>
+	</b-col>
 </template>
 
 <script>

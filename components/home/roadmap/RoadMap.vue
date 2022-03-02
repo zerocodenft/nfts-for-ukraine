@@ -50,8 +50,6 @@ export default {
 <style lang="scss">
 @import 'assets/scss/main';
 .roadmap {
-	max-width: 1256px;
-
 	&__item {
 		max-width: 1084px;
 	}
