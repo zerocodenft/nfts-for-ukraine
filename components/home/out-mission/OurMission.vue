@@ -1,6 +1,6 @@
 <template>
 	<b-col cols="12">
-		<BlockHeader class="mb-5">
+		<BlockHeader>
 			<template #title>
 				<span class='d-flex text-black align-items-center pl-2'>OUR MISSION</span>
 			</template>

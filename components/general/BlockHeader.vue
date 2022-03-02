@@ -1,5 +1,5 @@
 <template>
-	<div class="w-100">
+	<div class="w-100 mt-5 mb-5 pt-3">
 		<div class='d-flex'>
 			<b-img src='@/assets/img/arrow.svg'/>
 			<slot name="title"></slot>

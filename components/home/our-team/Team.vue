@@ -63,7 +63,7 @@ export default {
 <style scoped lang='scss'>
 .team {
 	gap: 3rem;
-	margin-top: 5.6rem;
+	margin-top: 5rem;
 	&__list{
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);

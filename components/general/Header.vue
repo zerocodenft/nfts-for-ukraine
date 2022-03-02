@@ -1,8 +1,8 @@
 <template>
 	<div class="header w-100 z-index-1 position-sticky pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
 		<b-navbar class=" header__container mx-auto py-0 pb-4 z-index-1 w-100 d-flex align-items-center" toggleable="lg" type="dark" variant="">
-			<b-navbar-brand to="#welcome-page">
-				<div class="header__brand mr-xl-5">
+			<b-navbar-brand class="header__brand" to="#">
+				<div class=" mr-xl-5">
 					NFT UA
 				</div>
 			</b-navbar-brand>
@@ -10,11 +10,14 @@
 			<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
 				<b-navbar-nav class=" d-flex justify-content-center align-items-center">
 					<b-nav-item
-						class="header__link shadow-none text-nowrap" to="#collection">Collection</b-nav-item>
-					<b-nav-item class="header__link shadow-none text-nowrap" to="#our-mission">Our mission</b-nav-item>
-					<b-nav-item class="header__link shadow-none text-nowrap" to="#team">Our team</b-nav-item>
-					<b-nav-item class="header__link shadow-none text-nowrap" to="#road-map">Roadmap </b-nav-item>
-					<b-nav-item class="header__link shadow-none text-nowrap" to="#faq">FAQ</b-nav-item>
+						v-for="headerItem in headerItems"
+						:key="headerItem.id"
+						class="header__link shadow-none text-nowrap"
+						:to="headerItem.id"
+						@click.passive="scrollToContent(headerItem.id)"
+					>
+						{{ headerItem.title }}
+					</b-nav-item>
 				</b-navbar-nav>
 				<div class="d-flex justify-content-center z-index-1 order-1">
 					<b-button class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
@@ -25,8 +28,17 @@
 </template>
 
 <script>
-
+const SCROLL_OFFSET = 75
 export default {
+	data: () => ({
+		headerItems: [
+			{title: "Collection", id: "#collection"},
+			{title: "Our Mission", id: "#our-mission"},
+			{title: "Our Team", id: "#team"},
+			{title: "Roadmap", id: "#roadmap"},
+			{title: "FAQ", id: "#faq"},
+		]
+	}),
 	methods: {
 		async onWalletConnect() {
 			try {
@@ -38,6 +50,11 @@ export default {
 					variant: 'danger',
 				})
 			}
+		},
+		scrollToContent(id) {
+			const content = document.querySelector(id)
+			const offsetTop = content ? (content.offsetTop - SCROLL_OFFSET) : 0
+			scrollTo(0, offsetTop)
 		}
 	}
 }
@@ -62,6 +79,7 @@ export default {
 		}
 	}
 	&__brand {
+		outline: none !important;
 		color: $dark !important;
 		line-height: 2.3rem;
 		@include fonts(normal, 800, 2.5rem, "Neue Machina-bold")

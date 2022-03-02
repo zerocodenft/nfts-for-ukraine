@@ -3,15 +3,18 @@
 		<Header />
 		<Nuxt />
 		<Footer />
+		<ScrollToTop />
 	</div>
 </template>
 <script>
 import Header from '@/components/general/Header'
 import Footer from '@/components/general/Footer'
+import ScrollToTop from "@/components/general/ScrollToTop";
 
 export default {
 	name: 'Default-Layout',
 	components: {
+		ScrollToTop,
 		Header,
 		Footer
 	}

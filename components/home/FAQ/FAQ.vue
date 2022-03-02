@@ -1,6 +1,6 @@
 <template>
 	<b-col cols='12' class='mt-5 pt-3'>
-		<BlockHeader class='mb-4'>
+		<BlockHeader>
 			<template #title>
 				<span class='d-flex text-black align-items-center pl-2'>FAQ</span>
 			</template>
@@ -106,8 +106,7 @@ export default {
 @import "assets/scss/main";
 
 .faq {
-	max-width: 1200px;
-	margin: 0 auto;
+	max-width: 1256px;
 
 	&__item {
 		padding: 26px 16px;

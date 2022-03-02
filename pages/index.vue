@@ -5,12 +5,14 @@
 			<Collection id="collection" />
 			<OurMission id="our-mission" />
 			<Team id="team" />
+			<RoadMap id="roadmap" />
 			<FAQ id="faq" />
 		</b-row>
 	</b-container>
 </template>
 
 <script>
+import RoadMap from "@/components/home/roadmap/RoadMap";
 console.group('Powered by www.zerocodenft.com')
 console.info(
 	'%cDrop Your NFT collection with ZERO coding skills!',
@@ -29,6 +31,7 @@ import FAQ from "~/components/home/FAQ/FAQ";
 export default {
 	mixins: [MintMixin],
 	components: {
+		RoadMap,
 		Team,
 		FAQ,
 		OurMission,
