@@ -1,5 +1,5 @@
 <template>
-	<footer class='nft-container footer mt-5 w-100'>
+	<footer class='nft-container footer w-100 mt-5 pt-3 pt-lg-5'>
 		<div class='footer__border d-flex flex-column flex-lg-row justify-content-between align-items-center'>
 			<span class="order-1 order-lg-0 text-center">Copyright 2022 NFT UA. Made with love by ukrainians in USA. Terms & Conditions</span>
 			<div class='footer__actions d-flex align-items-center order-0 order-lg-1 mb-4 mb-lg-0'>
@@ -26,7 +26,6 @@ export default {
 @import 'assets/scss/main';
 
 .footer {
-	margin-top: 10rem !important;
 	@include fonts(normal, 400, 1rem, 'Neue Machina-normal');
 
 	&__border {

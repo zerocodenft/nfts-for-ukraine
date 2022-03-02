@@ -6,13 +6,14 @@
 		<b-img
 			v-if="left"
 			width="160"
+			class="mr-3"
 			:src="require(`@/assets/img/home/roadmap/${img}`)"
 			alt="black block"
 		/>
-		<div class="ml-3 d-flex justify-content-between align-items-center roadmap__content flex-column flex-md-row order-1 order-md-0">
+		<div class="d-flex justify-content-between align-items-center roadmap__content flex-column flex-md-row order-1 order-md-0">
 			<div
 				class="roadmap__title"
-				:class="[!left && 'order-md-2', left ? 'mr-3' : 'ml-3']"
+				:class="[!left && 'order-md-2', left ? 'mr-lg-3' : 'ml-lg-3']"
 			>
 				{{ item.title }}
 			</div>
@@ -25,7 +26,7 @@
 		<b-img
 			v-if="!left"
 			width="160"
-			class="order-0 order-md-1"
+			class="order-0 order-md-1 mr-3"
 			:src="require(`@/assets/img/home/roadmap/${img}`)"
 			alt="black block"
 		/>

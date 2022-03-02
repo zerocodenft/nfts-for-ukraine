@@ -1,5 +1,5 @@
 <template>
-	<b-col cols='12' class='mt-5 pt-3'>
+	<b-col cols='12'>
 		<BlockHeader>
 			<template #title>
 				<span class='d-flex text-black align-items-center pl-2'>FAQ</span>

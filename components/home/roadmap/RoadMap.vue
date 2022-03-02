@@ -6,7 +6,7 @@
 			</template>
 		</BlockHeader>
 
-		<div class="ml-sx-5 pl-2 pt-2 ml-5 mb-5">
+		<div class="ml-sx-5 pl-2 pt-2 mb-5 ml-lg-5">
 			<div class="content__header mb-3">And thats how we will do it</div>
 			<div class="content__text">
 				Lorem upsum reson tangos issa mia feroder...Lorem upsum reson tangos
