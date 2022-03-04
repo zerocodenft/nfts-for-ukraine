@@ -6,14 +6,14 @@
 				Ape in to Support Ukraine.<br />
 				Get your NFT.
 			</div>
-			<div class='welcome-page__text--sub-title'>
-				<p class='mb-5 mr-5'>We've reimagined some favorite NFT collections to honor the people of Ukraine. You can support
+			<div class='welcome-page__text--sub-title text-md-left'>
+				<p class='mb-5 mr-md-5 mr-0'>We've reimagined some favorite NFT collections to honor the people of Ukraine. You can support
 					Ukraine by
 					minting a limited edition NFT.
 					For each edition, holders generously let us reimagine the artwork of their NFTs to create a unique token for
 					your support.
 				</p>
-				<p class='mt-3 mr-5'>
+				<p class='mt-3 mr-md-5 mr-0'>
 					‘Ape in For Ukraine’ provides funds to help those who are fighting against invasion of their country and
 					civilians who have been displaced. Join people around the world in using the power of cryptocurrency to
 					undermine Putin’s efforts of destruction.

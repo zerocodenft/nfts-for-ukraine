@@ -1,5 +1,5 @@
 <template>
-	<div class='member d-flex flex-column align-items-center'>
+	<div class='member d-flex flex-column justify-content-between align-items-center'>
 		<div class='member__img'>
 			<img :style="`transform: rotate(${member.rotate}deg)`" :src='require("@/assets/img/home/team/member.png")' alt='member'/>
 		</div>

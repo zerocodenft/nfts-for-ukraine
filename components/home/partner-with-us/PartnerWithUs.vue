@@ -1,5 +1,5 @@
 <template>
-	<div class='partner-with-us w-75'>
+	<div class='partner-with-us'>
 		<BlockHeader>
 			<template #title>
 				<span class='title d-flex text-black align-items-center pl-2'>PARTNER WITH US</span>
@@ -95,6 +95,9 @@ export default {
 @import '@/assets/scss/mixins';
 @import '@/assets/scss/variables';
 .partner-with-us {
+	@media (min-width: 776px) {
+		width: 75%;
+	}
 	&__form {
 		&-title {
 			@include fonts(normal, normal, 1.125rem, 'Neue Machina-300')
