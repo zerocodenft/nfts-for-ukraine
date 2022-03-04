@@ -15,7 +15,7 @@
 			</b-row>
 			<b-row class='px-3 mt-3'>
 				<b-col class='col-9'>
-					<b-button class='collection-items-wrapper__card__action-buy w-100 border-0 shadow-none'>MINT</b-button>
+					<b-button class='collection-items-wrapper__card__action-buy w-100 border-0 shadow-none' to='/nft-page'>MINT</b-button>
 				</b-col>
 				<b-col class='col-3'>
 					<b-button class='collection-items-wrapper__card__action-share shadow-none border-0 p-0 bg-transparent w-100'>
