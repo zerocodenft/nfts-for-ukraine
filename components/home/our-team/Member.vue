@@ -4,9 +4,16 @@
 			<img :style="`transform: rotate(${member.rotate}deg)`" :src='require("@/assets/img/home/team/member.png")' alt='member'/>
 		</div>
 		<div class='member__full-name'>
-			{{ member.firstName }} {{ member.lastName }}
+			{{ member.firstName }}
 		</div>
-		<div class='member__about'>{{ member.about }}</div>
+		<div class='member__about'>
+			<p v-html='member.about'/>
+		</div>
+		<div class='member-social'>
+			<b-button class='border-0 shadow-none bg-transparent mt-2'>
+				<b-img :src='require(`@/assets/img/${member.social}.svg`)'/>
+			</b-button>
+		</div>
 	</div>
 </template>
 
@@ -25,6 +32,7 @@ export default {
 <style scoped lang='scss'>
 @import '@/assets/scss/mixins';
 .member {
+
 	&__full-name {
 		margin-top: 2.625rem;
 		@include fonts(normal, 800, 18px, 'Neue Machina-800');

@@ -2,7 +2,7 @@
 	<b-col cols="12">
 		<BlockHeader>
 			<template #title>
-				<span class='d-flex text-black align-items-center pl-2'>COLLECTION</span>
+				<span class='title d-flex text-black align-items-center pl-2'>COLLECTION</span>
 			</template>
 		</BlockHeader>
 		<div class='collection-item my-4'>
@@ -23,42 +23,50 @@ export default {
 	data: () => ({
 		nftList: [
 			{
-				title: "Ukrainian Punk",
+				title: "Remarkable Ukraine",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "one"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "World of Ukrainian Women",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "two"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "Zelensky Punk",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "three"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "Remarkable Ukraine",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "four"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "Remarkable Ukraine",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "five"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "Remarkable Ukraine",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "six"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "Remarkable Ukraine",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "seven"
 			},
 			{
-				title: "Ukrainian Punk",
+				title: "Remarkable Ukraine",
+				description: `Derive form Remarkable </br>Women #202 </br>Limited edition of 2000`,
 				price: "0.105 ETH",
 				nft: "eight"
 			}

@@ -2,7 +2,7 @@
 	<b-col cols="12" class='team'>
 		<BlockHeader>
 			<template #title>
-				<span class='d-flex text-black align-items-center pl-2'>OUR TEAM</span>
+				<span class='title d-flex text-black align-items-center pl-2'>OUR TEAM</span>
 			</template>
 		</BlockHeader>
 		<div class='team__list'>
@@ -25,35 +25,75 @@ export default {
 		return{
 			listMembers: [
 				{
-					firstName: 'First',
+					firstName: 'Ihor',
 					lastName: 'Last',
-					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
+					about: 'Software_Engineer </br>Ivano_Frankivsk, Ukraine',
+					social: 'twitter',
 					rotate: '8.67'
 				},
 				{
-					firstName: 'First',
+					firstName: 'Mykhailo',
 					lastName: 'Last',
-					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
-					rotate: '-1'
+					about: 'Software_Engineer </br>Unknown_City, Ukraine',
+					social: 'twitter',
+					rotate: '8.67'
 				},
 				{
-					firstName: 'First',
+					firstName: 'Serge',
 					lastName: 'Last',
-					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
-					rotate: '-7'
+					about: 'Product_Designer </br>Lutsk, Ukraine',
+					social: 'linkedIn',
+					rotate: '8.67'
 				},
 				{
-					firstName: 'First',
+					firstName: 'Anna',
 					lastName: 'Last',
-					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
-					rotate: '8.5'
+					about: 'Product_Designer </br>Lutsk, Ukraine',
+					social: 'twitter',
+					rotate: '8.67'
 				},
 				{
-					firstName: 'First',
+					firstName: 'Sarah',
 					lastName: 'Last',
-					about: 'Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc Lorem ipsum saran tiopasc',
-					rotate: '-2.2'
-				}
+					about: 'Strategy </br>Miami, USA',
+					social: 'twitter',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'William',
+					lastName: 'Last',
+					about: 'Software_Engineer </br>Ivano_Frankivsk, Ukraine',
+					social: 'twitter',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'N/A',
+					lastName: 'Last',
+					about: 'Software_Engineer </br>Ivano_Frankivsk, Ukraine',
+					social: 'twitter',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'N/A',
+					lastName: 'Last',
+					about: 'Product_Designer </br>Lutsk, Ukraine',
+					social: 'twitter',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'N/A',
+					lastName: 'Last',
+					about: 'Digital_Marketing </br>Unknown_City, Ukraine',
+					social: 'twitter',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'N/A',
+					lastName: 'Last',
+					about: 'Strategy </br>Miami, USA',
+					social: 'twitter',
+					rotate: '8.67'
+				},
 			]
 		}
 	}

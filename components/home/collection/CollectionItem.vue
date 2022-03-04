@@ -1,29 +1,26 @@
 <template>
-	<div class='collection-items-wrapper__card mx-2 py-4 my-3 position-relative'>
+	<div class='collection-items-wrapper__card mx-2 py-4 my-3 position-relative d-flex flex-column justify-content-between'>
 		<div class="collection-items-wrapper__card__nft">
 			<b-img class='w-100 h-100' :src='require(`@/assets/img/nfts/${collection.nft}.svg`)' />
 			<span class='text-white position-absolute collection-items-wrapper__card__nft-price text-nowrap p-3'>{{collection.price}}</span>
 		</div>
 		<div class='collection-items-wrapper__card__action'>
-			<b-row class='no-gutters px-3'>
-				<b-col class='col-8 p-0 d-flex align-items-center'>
-					<span class='collection-items-wrapper__card__action-title'>{{collection.title}}</span>
+			<b-row class='no-gutter flex-column px-3'>
+				<b-col>
+					<p class='collection-items-wrapper__card__action-title'>{{collection.title}}</p>
 				</b-col>
-				<b-col class='col-4 d-flex justify-content-end'>
-					<b-button class='collection-items-wrapper__card__action-btn d-flex align-items-center justify-content-center shadow-none bg-transparent border-0 rounded-circle'>
-						<b-img src='@/assets/img/share.svg'/>
-					</b-button>
-					<b-button class='collection-items-wrapper__card__action-btn ml-2 d-flex align-items-center justify-content-center shadow-none bg-transparent border-0 rounded-circle'>
-						<b-img src='@/assets/img/heart.svg'/>
-					</b-button>
+				<b-col>
+					<p class='collection-items-wrapper__card__action-description mt-3' v-html='collection.description' />
 				</b-col>
 			</b-row>
 			<b-row class='px-3 mt-3'>
-				<b-col>
-					<b-button class='collection-items-wrapper__card__action-buy w-100 border-0 shadow-none rounded'>BUY</b-button>
+				<b-col class='col-9'>
+					<b-button class='collection-items-wrapper__card__action-buy w-100 border-0 shadow-none'>MINT</b-button>
 				</b-col>
-				<b-col>
-					<b-button class='collection-items-wrapper__card__action-details shadow-none bg-transparent w-100'>DETAILS</b-button>
+				<b-col class='col-3'>
+					<b-button class='collection-items-wrapper__card__action-share shadow-none border-0 p-0 bg-transparent w-100'>
+						<b-img src='@/assets/img/collection-share.svg' />
+					</b-button>
 				</b-col>
 			</b-row>
 		</div>
@@ -50,6 +47,7 @@ export default {
 	border-radius: $brs;
 }
 .collection-items-wrapper__card {
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	@include border-radius(.8rem);
 	outline: 2px solid rgba(0, 0, 0, 0.55);
 	filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.16));
@@ -59,7 +57,7 @@ export default {
 			@include border-radius(.8rem);
 			right: 2rem;
 			top: 2rem;
-			background: rgba(0, 0, 0, 0.5);
+			background: rgba(0, 0, 0, 0.6);
 			box-shadow: 10px 10px 20px rgba(0 0 0 / .24);
 			backdrop-filter: blur(10px);
 		}
@@ -67,18 +65,19 @@ export default {
 	&__action {
 		box-sizing: border-box;
 		&-title {
-			@include fonts(normal, 800, 1rem, 'Neue Machina-800')
+			@include fonts(normal, normal, 1.125rem, 'Neue Machina-800')
 		}
-		&-btn {
-			background: $dark !important;
-			width: 2rem;
-			height: 2rem;
+		&-description {
+			@include fonts(normal, normal, 1.125rem, 'Neue Machina-300')
 		}
 		&-buy {
+			@include border-radius(.5rem);
 			background: $dark !important;
 		}
-		&-details {
-			color: $dark;
+		&-share {
+			img {
+				width: 2rem;
+			}
 		}
 	}
 }

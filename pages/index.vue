@@ -7,6 +7,7 @@
 			<Team id="team" />
 			<RoadMap id="roadmap" />
 			<FAQ id="faq" />
+			<PartnerWithUs id="partner"/>
 		</b-row>
 	</b-container>
 </template>
@@ -27,10 +28,12 @@ import MintMixin from '@/mixins/mint'
 import WelcomePage from '@/components/home/welcome-page/WelcomePage'
 import Team from '@/components/home/our-team/Team'
 import FAQ from "~/components/home/FAQ/FAQ";
+import PartnerWithUs from '@/components/home/partner-with-us/PartnerWithUs'
 
 export default {
 	mixins: [MintMixin],
 	components: {
+		PartnerWithUs,
 		RoadMap,
 		Team,
 		FAQ,

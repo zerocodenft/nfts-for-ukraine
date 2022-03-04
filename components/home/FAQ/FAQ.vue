@@ -2,7 +2,7 @@
 	<b-col cols='12'>
 		<BlockHeader>
 			<template #title>
-				<span class='d-flex text-black align-items-center pl-2'>FAQ</span>
+				<span class='title d-flex text-black align-items-center pl-2'>FAQ</span>
 			</template>
 		</BlockHeader>
 
@@ -48,7 +48,17 @@ export default {
 		questions: [
 			{
 				isToggle: true,
-				title: 'WHAT is NFT UA?',
+				title: "What is 'Ape in for Ukraine'?",
+				description:
+					'To celebrate the Discord group at 25,000 members, there will be a raffle draw giveaway, of five Strong Apes, to five lucky ' +
+					'Discord members. To achieve this milestone, we all need to work together as a cooperative ape civilization to make our Discord and' +
+					'Twitter community thrive.' +
+					'Join the SAC Discord group today for announcements on the latest SAC development and giveaway packages, lined up for members of the ' +
+					'Strong Ape community.'
+			},
+			{
+				isToggle: false,
+				title: 'WHAT is NFT?',
 				description:
 					'To celebrate the Discord group at 25,000 members, there will be a raffle draw giveaway, of five Strong Apes, to five lucky ' +
 					'Discord members. To achieve this milestone, we all need to work together as a cooperative ape civilization to make our Discord and' +
@@ -76,7 +86,7 @@ export default {
 			},
 			{
 				isToggle: false,
-				title: 'Where we well donate?',
+				title: 'What about IP and copyright?',
 				description:
 					'A fundamental theme at SAC is “uniting for strength”, which is why all holders of Strong Ape' +
 					' will get the privilege to join our exclusive SAC community. This group is beyond getting ripped for lifting ' +
@@ -85,7 +95,14 @@ export default {
 			},
 			{
 				isToggle: false,
-				title: 'Where we well donate?',
+				title: 'How many can i mint?',
+				description:
+					'Nothing will stop us, to celebrate this milestone we will be raffling 10 Strong Apes including one Memorable' +
+					' Ape among all the Strong Ape holders and we will do daily giveaways for 30 days long with a total value of $100,000!'
+			},
+			{
+				isToggle: false,
+				title: 'How cam i contact you?',
 				description:
 					'Nothing will stop us, to celebrate this milestone we will be raffling 10 Strong Apes including one Memorable' +
 					' Ape among all the Strong Ape holders and we will do daily giveaways for 30 days long with a total value of $100,000!'

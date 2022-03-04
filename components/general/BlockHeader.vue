@@ -14,8 +14,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'assets/scss/mixins';
 //@import 'assets/scss/variables';
-//@import 'assets/scss/mixins';
 
 //.title {
 //	line-height: $line-height-title;
@@ -24,4 +24,7 @@ export default {
 //		line-height: 1.875rem;
 //	}
 //}
+.title {
+ @include fonts(normal, normal, clamp(1.2rem, 2.5vw, 2rem), 'Neue Machina-800' )
+}
 </style>

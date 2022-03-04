@@ -15,7 +15,7 @@
 				class="roadmap__title"
 				:class="[!left && 'order-md-2', left ? 'mr-lg-3' : 'ml-lg-3']"
 			>
-				{{ item.title }}
+				<p class='text-nowrap px-2'>{{ item.title }}</p>
 			</div>
 			<div
 				class="roadmap__description"
@@ -53,4 +53,7 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped lang='scss'>
+.roadmap__item {
+}
+</style>

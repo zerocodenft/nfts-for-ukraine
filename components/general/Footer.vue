@@ -1,15 +1,15 @@
 <template>
 	<footer class='nft-container footer w-100 mt-5 pt-3 pt-lg-5'>
 		<div class='footer__border d-flex flex-column flex-lg-row justify-content-between align-items-center'>
-			<span class="order-1 order-lg-0 text-center">Copyright 2022 NFT UA. Made with love by ukrainians in USA. Terms & Conditions</span>
+			<span class="order-1 order-lg-0 text-center">Copyright 2022 NFT UA. Made with love by ukrainians in USA.</span>
 			<div class='footer__actions d-flex align-items-center order-0 order-lg-1 mb-4 mb-lg-0'>
 				<div>
-					<img :src='require("@/assets/img/footer/instagram.svg")' alt='instagram'>
+					<img class='cursor-pointer' :src='require("@/assets/img/footer/instagram.svg")' alt='instagram'>
 				</div>
 				<div>
-					<img :src='require("@/assets/img/footer/discord.svg")' alt='discord'>
+					<img class='cursor-pointer' :src='require("@/assets/img/footer/discord.svg")' alt='discord'>
 				</div>
-				<a class='footer__actions--link'>Terms & Conditions</a>
+				<a class='footer__actions--link cursor-pointer'>Terms & Conditions</a>
 			</div>
 		</div>
 	</footer>

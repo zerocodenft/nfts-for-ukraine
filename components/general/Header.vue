@@ -20,7 +20,7 @@
 					</b-nav-item>
 				</b-navbar-nav>
 				<div class="d-flex justify-content-center z-index-1 order-1">
-					<b-button class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
+					<b-button to="#partner" class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
 				</div>
 			</b-collapse>
 		</b-navbar>
