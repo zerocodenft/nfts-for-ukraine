@@ -9,16 +9,24 @@
 				<div>
 					<img class='cursor-pointer' :src='require("@/assets/img/footer/discord.svg")' alt='discord'>
 				</div>
-				<a class='footer__actions--link cursor-pointer'>Terms & Conditions</a>
+				<a @click='openToS' class='footer__actions--link cursor-pointer'>Terms & Conditions</a>
 			</div>
 		</div>
+		<TermsAndCondition />
 	</footer>
 </template>
 
 <script>
+import TermsAndCondition from '../../pages/terms-and-conditions'
 export default {
 	name: 'Footer',
-	data: () => ({})
+	components: { TermsAndCondition },
+	data: () => ({}),
+	methods: {
+		openToS() {
+			this.$bvModal.show('bv-modal-example')
+		}
+	}
 }
 </script>
 
