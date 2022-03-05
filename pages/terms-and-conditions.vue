@@ -79,10 +79,6 @@ export default {
 @import "@/assets/scss/mixins";
 @import "@/assets/scss/variables";
 
-.ps {
-	height: calc(100vh - 400px);
-}
-
 .terms-and-condition {
 	&__title {
 		@include fonts(normal,normal,clamp(1.1rem,2.5vw , 1.275rem),'Neue Machina-800')
@@ -117,6 +113,12 @@ export default {
 				width: 8rem;
 				line-height: 2.2rem;
 			}
+		}
+	}
+	.ps {
+		height: calc(100vh - 400px);
+		@media (max-width: 576px) {
+			height: calc(100vh - 300px);
 		}
 	}
 }

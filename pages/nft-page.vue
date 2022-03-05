@@ -11,7 +11,7 @@
 					rada sarah text goest here...Lorem ipsum toga rada sarah text goest here...Lorem ipsum toga rada sarah text
 					goest here...
 				</div>
-				<div class='nft-page__main'>Quantaty: <span class='nft-page__sub'>2000</span></div>
+				<div class='nft-page__main'>Quantaty: <span class='nft-page__sub'>123/2000</span></div>
 				<div class='nft-page__main py-3 my-4'>Original NFT: <span class='nft-page__sub'>www.originalnft.com</span></div>
 				<div class='nft-page__share d-flex align-items-center pb-3 mb-4'>
 					<div>
@@ -20,19 +20,19 @@
 					<div>Share with Friends</div>
 				</div>
 				<div class='nft-page__counter d-flex align-items-center'>
-					<div class='nft-page__counter__input d-flex align-items-center'>
-						<div class='action d-flex align-items-center justify-content-center'>
+					<div class='nft-page__counter__input d-flex align-items-center cursor-pointer'>
+						<div class='action d-flex align-items-center justify-content-center' @click='nftCount--'>
 							<img :src="require('@/assets/img/nft-page/minus.svg')">
 						</div>
-						1
-						<div class='action d-flex align-items-center justify-content-center'>
+						{{ nftCount }}
+						<div class='action d-flex align-items-center justify-content-center cursor-pointer' @click='nftCount++'>
 							<img :src="require('@/assets/img/nft-page/plus.svg')">
 						</div>
 					</div>
 					<b-button size='lg' class='mint'>Mint</b-button>
 				</div>
 			</div>
-			<div class='nft-page__image d-flex flex-column justify-content-center align-items-end'>
+			<div class='nft-page__image d-flex flex-column justify-content-center align-items-end '>
 				<div class='nft-page__price pt-4 mb-5'>
 					0.105 ETH
 				</div>
@@ -49,7 +49,13 @@ import BackButton from '../components/general/BackButton'
 
 export default {
 	name: 'nft-page',
-	components: { BackButton }
+	components: { BackButton },
+	data: () => ({
+		nftCount: 1,
+	}),
+	methods: {
+
+	}
 }
 </script>
 

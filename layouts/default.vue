@@ -1,5 +1,5 @@
 <template>
-	<div class='home-bg-frame'>
+	<div :class="checkBackgroundFrame">
 		<Header />
 		<Nuxt />
 		<Footer />
@@ -17,6 +17,14 @@ export default {
 		ScrollToTop,
 		Header,
 		Footer
+	},
+	computed: {
+		checkBackgroundFrame() {
+			switch (this.$route.path) {
+				case '/nft-page': return 'nft-bg-frame'
+				default: return 'home-bg-frame'
+			}
+		}
 	}
 }
 </script>
@@ -24,5 +32,10 @@ export default {
 .home-bg-frame {
 	background: url("~/assets/img/home/home-bg-frame.png") top no-repeat;
 	background-size: 100% 100%;
+}
+.nft-bg-frame {
+	background: url("~/assets/img/nft-page/nft-bg-frame.png") top no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
 }
 </style>

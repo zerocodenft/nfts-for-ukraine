@@ -1,12 +1,12 @@
 <template>
-	<div class="header w-100 z-index-1 position-sticky pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
-		<b-navbar class=" header__container mx-auto py-0 pb-4 z-index-1 w-100 d-flex align-items-center" toggleable="lg" type="dark" variant="">
+	<div class="header nft-container w-100 z-index-1 position-sticky pt-2 pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
+		<b-navbar class="header__container mx-auto px-0 pb-2 pb-sm-4 z-index-1 w-100 d-flex align-items-center" toggleable="lg" type="dark">
 			<b-navbar-brand class="header__brand" to="/">
 				<div class=" mr-xl-5">
 					NFT UA
 				</div>
 			</b-navbar-brand>
-			<b-navbar-toggle target="nav-collapse" class=''></b-navbar-toggle>
+			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 			<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
 				<b-navbar-nav class=" d-flex justify-content-center align-items-center">
 					<b-nav-item
@@ -30,6 +30,7 @@
 <script>
 const SCROLL_OFFSET = 75
 export default {
+	name: 'Header',
 	data: () => ({
 		headerItems: [
 			{title: "Collection", id: "#collection"},
@@ -62,11 +63,25 @@ export default {
 <style lang="scss">
 @import "assets/scss/main";
 .header {
-	background: url("../../assets/img/header-bg-frame.svg");
 	top: 0;
+	background: transparent;
+	.navbar {
+		background: url("../../assets/img/header-bg-frame.svg");
+	}
+	&:before {
+		content: '';
+		background: url("../../assets/img/header-bg-frame.svg");
+		position: fixed;
+		width: 100vw;
+		height: 105px;
+		left: 0;
+		top: 0;
+		@media (max-width: 600px) {
+			height: 73px !important;
+		}
+	}
 
 	&__container {
-		max-width: 1270px;
 		border-bottom: $dark 2px solid;
 	}
 
