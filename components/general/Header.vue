@@ -1,7 +1,7 @@
 <template>
 	<div class="header w-100 z-index-1 position-sticky pt-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
 		<b-navbar class=" header__container mx-auto py-0 pb-4 z-index-1 w-100 d-flex align-items-center" toggleable="lg" type="dark" variant="">
-			<b-navbar-brand class="header__brand" to="#">
+			<b-navbar-brand class="header__brand" to="/">
 				<div class=" mr-xl-5">
 					NFT UA
 				</div>

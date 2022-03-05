@@ -18,7 +18,8 @@
     "dotenv": "^9.0.2",
     "ethers": "5.5.1",
     "merkletreejs": "^0.2.30",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "vue2-perfect-scrollbar": "^1.5.5"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

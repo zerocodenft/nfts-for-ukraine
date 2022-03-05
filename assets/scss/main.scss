@@ -14,6 +14,9 @@ body {
 	color: $brand-primary;
 	scroll-behavior: smooth;
 	font-family: "Neue Machina-bold", sans-serif;
+	&.modal-open {
+		overflow: hidden;
+	}
 }
 .nft-container {
 	padding: 0 6%;
