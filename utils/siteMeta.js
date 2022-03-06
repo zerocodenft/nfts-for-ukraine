@@ -1,8 +1,8 @@
 const type = "website";
 const url = "https://zerocodenft.com";
-const title = "Zero Code NFT dApp";
+const title = "Ape in For Ukraine";
 const description = "Another drop powered by Zero Code NFT";
-const mainImage = "https://zerocodenft-demo.netlify.app/img/zerocodenftlogo_dark.svg";
+const mainImage = "https://apeinforukraine/img/zerocodenftlogo_dark.svg";
 const twitterCard = "summary_large_image";
 
 export default (meta) => {

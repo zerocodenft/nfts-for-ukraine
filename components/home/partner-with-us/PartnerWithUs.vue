@@ -31,14 +31,14 @@
 					id='input-2'
 					class='shadow-none mt-4'
 					v-model='formData.website'
-					placeholder='Website'
+					placeholder='Subject'
 					trim
 				/>
 				<b-form-textarea
 					id="textarea"
 					class='mt-4 shadow-none'
 					v-model='formData.message'
-					placeholder="Collection Description"
+					placeholder="Message"
 					rows="3"
 					no-resize
 				/>

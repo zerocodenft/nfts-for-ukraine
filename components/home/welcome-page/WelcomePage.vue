@@ -21,7 +21,7 @@
 			</div>
 			<div
 				class='welcome-page__actions d-flex justify-content-md-start justify-content-between flex-column flex-sm-row'>
-				<b-button class='brand-button' size='lg' variant='dark'>Connect wallet</b-button>
+				<b-button class='brand-button' size='lg' variant='dark' @click="mintNFTs">Mint NFTs</b-button>
 				<b-button class='brand-button--outlined' size='lg' variant='outline-dark'>Partner with Us</b-button>
 			</div>
 		</div>
@@ -33,7 +33,12 @@
 
 <script>
 export default {
-	name: 'WelcomePage'
+	name: 'WelcomePage',
+	methods: {
+		mintNFTs() {
+			document.getElementById("collectionItems").scrollIntoView()
+		}
+	}
 }
 </script>
 
