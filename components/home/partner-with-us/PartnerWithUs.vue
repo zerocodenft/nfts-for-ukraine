@@ -6,8 +6,7 @@
 			</template>
 		</BlockHeader>
 		<div class='partner-with-us__form'>
-			<p class='partner-with-us__form-title mb-4'>Lorem upsum reson tangos issa mia feroder...Lorem upsum reson tangos issa mia feroder...Lorem upsum reson
-				tangos issa mia feroder...Lorem upsum reson tangos
+			<p class='partner-with-us__form-title mb-4'>If you are interested in supporting this effort and working with us (as a blue chip holder, a web3 influencer, artist, event organizer, etc.) please reach out.
 			</p>
 			<b-form-group
 				id='fieldset-1'
@@ -31,14 +30,14 @@
 					id='input-2'
 					class='shadow-none mt-4'
 					v-model='formData.website'
-					placeholder='Subject'
+					placeholder='Website'
 					trim
 				/>
 				<b-form-textarea
 					id="textarea"
 					class='mt-4 shadow-none'
 					v-model='formData.message'
-					placeholder="Message"
+					placeholder="Collection Description"
 					rows="3"
 					no-resize
 				/>

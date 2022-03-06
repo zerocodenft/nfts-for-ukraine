@@ -2,7 +2,7 @@
 	<b-col cols='12'>
 		<BlockHeader>
 			<template #title>
-				<span class='title d-flex text-black align-items-center pl-2'>FAQ</span>
+				<span class='title d-flex text-black align-items-center pl-2'>FAQs</span>
 			</template>
 		</BlockHeader>
 
@@ -50,62 +50,37 @@ export default {
 				isToggle: true,
 				title: "What is 'Ape in for Ukraine'?",
 				description:
-					'To celebrate the Discord group at 25,000 members, there will be a raffle draw giveaway, of five Strong Apes, to five lucky ' +
-					'Discord members. To achieve this milestone, we all need to work together as a cooperative ape civilization to make our Discord and' +
-					'Twitter community thrive.' +
-					'Join the SAC Discord group today for announcements on the latest SAC development and giveaway packages, lined up for members of the ' +
-					'Strong Ape community.'
+					`Ape in for Ukraine is a series of limited edition NFTs and a token representing your donation to Ukraine. The NFTs are based off of well-known collections. We worked with holders to reimagine their NFTs for this cause.+`
 			},
 			{
 				isToggle: false,
-				title: 'WHAT is NFT?',
+				title: 'What is NFT?',
 				description:
-					'To celebrate the Discord group at 25,000 members, there will be a raffle draw giveaway, of five Strong Apes, to five lucky ' +
-					'Discord members. To achieve this milestone, we all need to work together as a cooperative ape civilization to make our Discord and' +
-					'Twitter community thrive.' +
-					'Join the SAC Discord group today for announcements on the latest SAC development and giveaway packages, lined up for members of the ' +
-					'Strong Ape community.'
+					`NFTs represent unique assets. They are non-fungible because each NFT’s value is based on its unique properties and features. When an NFT is created (or “minted”) and then sold, the purchaser owns that NFT and can sell it as they would any other item they own.`
 			},
 			{
 				isToggle: false,
-				title: 'Where we well donate?',
+				title: 'Where will funds be donated?',
 				description:
-					'We will deposit $50,000 into the SAC fund for ongoing project developments, marketing campaigns, and floor sweeps. The SAC ' +
-					'merchandise will also be launched for sales during this phase.'
-			},
-			{
-				isToggle: false,
-				title: 'Where we well donate?',
-				description:
-					'The takeover begins here, in the clash for control and dominance. This is where your status in the SAC community will be ' +
-					'decided by you alone, which is why you need every tool you can find to become an alpha ape. It is where you also get the opportunity to ' +
-					'win the rarest Strong Apes of the 12 memorable apes, which automatically earn you for a $10,000 cash price. There are only two giveaway ' +
-					'spots available for two alpha ape collectors, ' +
-					'who already hold a strong ape, to become memorables. If you think you’ve got what it' +
-					' takes to be a leader, join our Discord group today.'
+					`The contract has been written so funds go directly to the Ukraine digital wallet [ETH and USDT (ERC-20) - 0x165CD37b4C644C2921454429E7F9358d18A45e14]. We determined that donating to Ukraine directly is the best way we can help in the immediate defense against the Russian invasion, while leaving it to Ukraine to allocate funds to help rebuild the country and support displaced civilians long-term. Any changes for upcoming collections, such as directing funds to a vetted humanitarian organization, will be made clear and funds will continue to be trackable. `
 			},
 			{
 				isToggle: false,
 				title: 'What about IP and copyright?',
 				description:
-					'A fundamental theme at SAC is “uniting for strength”, which is why all holders of Strong Ape' +
-					' will get the privilege to join our exclusive SAC community. This group is beyond getting ripped for lifting ' +
-					'weights, here members help lift each other up to the next level. Each Strong ' +
-					'Ape also gets the opportunity to generate its own income when it participates in the ongoing ape wars.'
+					`We are working with collections that give holders the intellectual property rights in the underlying asset. The holders of each NFT we used to create derivatives generously granted us the permission to do so.`
 			},
 			{
 				isToggle: false,
-				title: 'How many can i mint?',
+				title: 'How many can I mint?',
 				description:
-					'Nothing will stop us, to celebrate this milestone we will be raffling 10 Strong Apes including one Memorable' +
-					' Ape among all the Strong Ape holders and we will do daily giveaways for 30 days long with a total value of $100,000!'
+					`You can mint up to 10 NFTs from each series. Note that collections are not randomly generated and unique like some collections, but rather 1/1000 limited edition series.`
 			},
 			{
 				isToggle: false,
-				title: 'How cam i contact you?',
+				title: 'How can I contact you?',
 				description:
-					'Nothing will stop us, to celebrate this milestone we will be raffling 10 Strong Apes including one Memorable' +
-					' Ape among all the Strong Ape holders and we will do daily giveaways for 30 days long with a total value of $100,000!'
+					`We’re reachable through Twitter messages. DM us @ApeinforUkraine. If you have a blue chip NFT you’d like to ‘donate’ for reimagination or you’re interested in partnering with us, for this project or something else, you can also use the form on this site.`
 			}
 		]
 	}),

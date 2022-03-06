@@ -10,7 +10,7 @@
 			<p v-html='member.about'/>
 		</div>
 		<div class='member-social'>
-			<b-button class='border-0 shadow-none bg-transparent mt-2'>
+			<b-button class='border-0 shadow-none bg-transparent mt-2' variant='link' :href='member.url' target='_blank'>
 				<b-img :src='require(`@/assets/img/${member.social}.svg`)'/>
 			</b-button>
 		</div>

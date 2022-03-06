@@ -7,22 +7,15 @@
 				Get your NFT.
 			</div>
 			<div class='welcome-page__text--sub-title text-md-left'>
-				<p class='mb-5 mr-md-5 mr-0'>We've reimagined some favorite NFT collections to honor the people of Ukraine. You can support
-					Ukraine by
-					minting a limited edition NFT.
-					For each edition, holders generously let us reimagine the artwork of their NFTs to create a unique token for
-					your support.
+				<p class='mb-5 mr-md-5 mr-0'>Support Ukraine by minting a limited edition NFT. We've reimagined some favorite NFT collections to honor the people of Ukraine. For each edition, holders generously let us reimagine the artwork of their NFTs to create a unique token for your support.
 				</p>
 				<p class='mt-3 mr-md-5 mr-0'>
-					‘Ape in For Ukraine’ provides funds to help those who are fighting against invasion of their country and
-					civilians who have been displaced. Join people around the world in using the power of cryptocurrency to
-					undermine Putin’s efforts of destruction.
+					‘Ape in for Ukraine’ provides funds to help those fighting against the invasion of their country displacement of their people. Join people around the world in using the power of cryptocurrency to undermine Putin’s full-scale destruction.
 				</p>
 			</div>
 			<div
 				class='welcome-page__actions d-flex justify-content-md-start justify-content-between flex-column flex-sm-row'>
-				<b-button class='brand-button' size='lg' variant='dark' @click="mintNFTs">Mint NFTs</b-button>
-				<b-button class='brand-button--outlined' size='lg' variant='outline-dark'>Partner with Us</b-button>
+				<b-button class='brand-button' size='lg' variant='dark' @click="mintNFTs">MINT NOW</b-button>
 			</div>
 		</div>
 		<div>

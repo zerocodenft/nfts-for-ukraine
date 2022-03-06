@@ -3,13 +3,13 @@
 		<div class='footer__border d-flex flex-column flex-lg-row justify-content-between align-items-center'>
 			<span class="order-1 order-lg-0 text-center">Copyright 2022. Made with ❤ by ukrainians for ukrainians.</span>
 			<div class='footer__actions d-flex align-items-center order-0 order-lg-1 mb-4 mb-lg-0'>
-				<div>
-					<img class='cursor-pointer' :src='require("@/assets/img/footer/instagram.svg")' alt='instagram'>
-				</div>
-				<div>
-					<img class='cursor-pointer' :src='require("@/assets/img/footer/discord.svg")' alt='discord'>
-				</div>
-				<a @click='openToS' class='footer__actions--link cursor-pointer'>Terms & Conditions</a>
+				<b-button variant='link' :href='$siteConfig.twitterURL' target='blank'>
+					<img width="50px" :src='require("@/assets/img/logos/twitter.svg")' alt='twitter'>
+				</b-button>
+				<b-button variant='link' :href='$siteConfig.marketplaceURL' target='blank'>
+					<img width="28px" :src='require("@/assets/img/logos/opensea.svg")' alt='opensea'>
+				</b-button>
+				<b-button variant='link' v-b-modal="'terms-and-condition'" class='footer__actions--link cursor-pointer'>Terms & Conditions</b-button>
 			</div>
 		</div>
 		<TermsAndCondition />
@@ -21,12 +21,6 @@ import TermsAndCondition from '../../pages/terms-and-conditions'
 export default {
 	name: 'Footer',
 	components: { TermsAndCondition },
-	data: () => ({}),
-	methods: {
-		openToS() {
-			this.$bvModal.show('bv-modal-example')
-		}
-	}
 }
 </script>
 

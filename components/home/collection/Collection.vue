@@ -5,6 +5,7 @@
 				<span class='title d-flex text-black align-items-center pl-2'>COLLECTION</span>
 			</template>
 		</BlockHeader>
+		<p>Mint up to 10 from each limited edition series.</p>
 		<div id="collectionItems" class='collection-item my-4'>
 			<CollectionItem v-for='(item, index) in nftList' :key='index' :collection='item' />
 		</div>

@@ -27,71 +27,65 @@ export default {
 				{
 					firstName: 'Ihor',
 					lastName: 'Last',
-					about: 'Software_Engineer </br>Ivano_Frankivsk, Ukraine',
-					social: 'twitter',
+					about: 'Smart_contract & Web3 </br> Ivano_Frankivsk, </br> Ukraine',
+					social: 'linkedIn',
+					url: 'https://linkedin.com/in/ibodnarchuk/',
 					rotate: '8.67'
 				},
 				{
 					firstName: 'Mykhailo',
 					lastName: 'Last',
-					about: 'Software_Engineer </br>Unknown_City, Ukraine',
-					social: 'twitter',
+					about: 'Software_engineer </br>Lviv, </br> Ukraine',
+					social: 'linkedIn',
+					url: 'https://linkedin.com/in/mykhailo-diakovych/',
 					rotate: '8.67'
 				},
 				{
 					firstName: 'Serge',
 					lastName: 'Last',
-					about: 'Product_Designer </br>Lutsk, Ukraine',
+					about: 'Product_Designer </br>Lutsk, </br> Ukraine',
 					social: 'linkedIn',
+					url: 'https://linkedin.com/in/skhaiba/',
 					rotate: '8.67'
 				},
 				{
 					firstName: 'Anna',
 					lastName: 'Last',
-					about: 'Product_Designer </br>Lutsk, Ukraine',
+					about: 'Marketing </br>Odessa, </br> Ukraine',
 					social: 'twitter',
+					url: 'https://twitter.com/anna_gandrabura',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'Igor',
+					lastName: 'Last',
+					about: 'Graphic_designer </br>Uknown_city, </br> Ukraine',
+					social: 'linkedIn',
+					url: '#',
 					rotate: '8.67'
 				},
 				{
 					firstName: 'Sarah',
 					lastName: 'Last',
-					about: 'Strategy </br>Miami, USA',
+					about: 'Strategy </br>Miami, </br> USA',
+					social: 'linkedIn',
+					url: 'https://linkedin.com/in/sarahnohe/',
+					rotate: '8.67'
+				},
+				{
+					firstName: 'quasi Digi',
+					lastName: 'Last',
+					about: 'Artist </br>Unknown_city, </br> Country',
 					social: 'twitter',
+					url: 'https://twitter.com/quasidigi',
 					rotate: '8.67'
 				},
 				{
 					firstName: 'William',
 					lastName: 'Last',
-					about: 'Software_Engineer </br>Ivano_Frankivsk, Ukraine',
-					social: 'twitter',
-					rotate: '8.67'
-				},
-				{
-					firstName: 'N/A',
-					lastName: 'Last',
-					about: 'Software_Engineer </br>Ivano_Frankivsk, Ukraine',
-					social: 'twitter',
-					rotate: '8.67'
-				},
-				{
-					firstName: 'N/A',
-					lastName: 'Last',
-					about: 'Product_Designer </br>Lutsk, Ukraine',
-					social: 'twitter',
-					rotate: '8.67'
-				},
-				{
-					firstName: 'N/A',
-					lastName: 'Last',
-					about: 'Digital_Marketing </br>Unknown_City, Ukraine',
-					social: 'twitter',
-					rotate: '8.67'
-				},
-				{
-					firstName: 'N/A',
-					lastName: 'Last',
-					about: 'Strategy </br>Miami, USA',
-					social: 'twitter',
+					about: 'Communications </br>New York, </br> USA',
+					social: 'linkedIn',
+					url: 'https://linkedin.com/in/bywilliamfreedman/',
 					rotate: '8.67'
 				},
 			]
@@ -106,7 +100,7 @@ export default {
 	margin-top: 5rem;
 	&__list{
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 3.5rem;
 		@media(max-width: 879px){
 			grid-template-columns: repeat(3, 1fr);

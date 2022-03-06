@@ -1,7 +1,7 @@
 <template>
 	<div class='terms-and-condition'>
 		<b-modal
-			id='bv-modal-example'
+			id='terms-and-condition'
 			hide-footer
 			header-close-content='✕'
 		>

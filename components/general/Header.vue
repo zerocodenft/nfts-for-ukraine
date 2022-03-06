@@ -13,6 +13,7 @@
 						v-for="headerItem in headerItems"
 						:key="headerItem.id"
 						class="header__link shadow-none text-nowrap"
+						link-classes="font-weight-bolder"
 						:to="headerItem.id"
 						@click.passive="scrollToContent(headerItem.id)"
 					>
@@ -34,8 +35,8 @@ export default {
 	data: () => ({
 		headerItems: [
 			{title: "Collection", id: "#collection"},
-			{title: "Our Mission", id: "#our-mission"},
-			{title: "Our Team", id: "#team"},
+			{title: "Mission", id: "#our-mission"},
+			{title: "Team", id: "#team"},
 			{title: "Roadmap", id: "#roadmap"},
 			{title: "FAQ", id: "#faq"},
 		]
