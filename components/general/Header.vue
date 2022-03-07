@@ -14,14 +14,14 @@
 						:key="headerItem.id"
 						class="header__link shadow-none text-nowrap"
 						link-classes="font-weight-bolder"
-						:to="headerItem.id"
+						:to="`/${headerItem.id}`"
 						@click.passive="scrollToContent(headerItem.id)"
 					>
 						{{ headerItem.title }}
 					</b-nav-item>
 				</b-navbar-nav>
 				<div class="d-flex justify-content-center z-index-1 order-1">
-					<b-button to="#partner" class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
+					<b-button to="/#partner" class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
 				</div>
 			</b-collapse>
 		</b-navbar>

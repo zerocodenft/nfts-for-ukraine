@@ -11,7 +11,7 @@
 		</div>
 		<div class="roadmap">
 			<template v-for="(roadmapItem, index) in roadMapItems">
-				<RoadMapItem :img="roadmapItem.image" :key="index" :left="!(index % 2)" :item="roadmapItem" />
+				<RoadMapItem :img="roadmapItem.image" :key="roadmapItem.title" :left="!(index % 2)" :item="roadmapItem" />
 				<div v-if="index < roadMapItems.length - 1" class="d-flex justify-content-center" :key="index">
 					<b-img class="roadmap__line" :src="require(`@/assets/img/home/roadmap/${!(index % 2) ? 'line-to-right' : 'line-to-left'}.svg`)" />
 				</div>
