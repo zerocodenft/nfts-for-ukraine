@@ -42,5 +42,8 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	@media (max-width: 600px) {
+		height: auto;
+	}
 }
 </style>
