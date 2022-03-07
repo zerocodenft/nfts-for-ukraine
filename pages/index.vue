@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import RoadMap from "@/components/home/roadmap/RoadMap";
 console.group('Powered by www.zerocodenft.com')
 console.info(
 	'%cDrop Your NFT collection with ZERO coding skills!',
@@ -22,6 +21,7 @@ console.info(
   font-weight:bold;`
 )
 console.groupEnd()
+import RoadMap from "@/components/home/roadmap/RoadMap";
 import OurMission from "@/components/home/out-mission/OurMission";
 import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
@@ -40,46 +40,6 @@ export default {
 		OurMission,
 		Collection,
 		WelcomePage,
-	},
-	data() {
-		return {
-			count: 1,
-			mintedCount: 0,
-			collectionSize: 0
-		}
-	},
-
-	// mounted() {
-	// 	const {
-	// 		chainId: targetChainId,
-	// 		abi,
-	// 		address,
-	// 		collectionSize
-	// 	} = this.$siteConfig.smartContract
-	//
-	// 	this.collectionSize = collectionSize
-	//
-	// 	try {
-	// 		// give some time for wallet plugin to init
-	// 		setTimeout(async () => {
-	// 			if (this.showCountdown || !this.$wallet.provider) return
-	//
-	// 			if (this.$wallet.chainId !== +targetChainId) {
-	// 				await this.$wallet.switchNetwork(targetChainId)
-	// 			}
-	//
-	// 			const nftContract = new ethers.Contract(address, abi, this.$wallet.provider)
-	// 			this.mintedCount = +(await nftContract.totalSupply())
-	// 			this.collectionSize = +(await nftContract.COLLECTION_SIZE())
-	// 		}, 2000)
-	// 	} catch (err) {
-	// 		console.error({ err })
-	// 	}
-	// },
-	methods: {
-		onMinted(val) {
-			this.mintedCount = val
-		}
 	}
 }
 </script>
