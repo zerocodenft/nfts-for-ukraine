@@ -1,7 +1,9 @@
 <template>
 	<div :class="checkBackgroundFrame">
-		<Header />
-		<Nuxt />
+		<div>
+			<Header />
+			<Nuxt />
+		</div>
 		<Footer />
 		<ScrollToTop />
 	</div>
@@ -37,5 +39,8 @@ export default {
 	background: url("~/assets/img/nft-page/nft-bg-frame.png") top no-repeat;
 	background-size: 100% 100%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 </style>
