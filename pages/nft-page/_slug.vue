@@ -14,7 +14,7 @@
 					{{ nft.title }}
 				</div>
 				<div class="nft-page__details py-3 my-4">
-					{{ nft.description }}
+					{{ nft.descriptionPage }}
 				</div>
 				<div class="nft-page__main">
 					Quantity:
@@ -84,7 +84,7 @@
 					justify-content-center
 					align-items-end
 				">
-				<div class="nft-page__price pt-4 mb-5">{{ nft.price }} ETH</div>
+				<div class="nft-page__price pt-4 mb-5">{{ nft.price }}</div>
 				<div>
 					<img :src="nft.image" alt="nft" />
 				</div>
@@ -96,6 +96,7 @@
 <script>
 import BackButton from '../../components/general/BackButton'
 import { ethers } from 'ethers'
+import { dataSource } from '../../data-source/dataSource'
 
 export default {
 	name: 'nft-page',
@@ -104,41 +105,7 @@ export default {
 		count: 1,
 		mintedCount: 0,
 		isBusy: false,
-		nfts: [
-			{
-				id: 1,
-				title: 'Remarkable Ukrainian Woman',
-				description: `The Remarkable Women Collection, reimagined to honor Ukrainian women,
-							who are fighting on the front lines, providing care for others, and trying
-							to get their children and loved ones to safety. Mint limit is 10.`,
-				quantity: 1000,
-				donatedBy: '@Snowratcrash',
-				price: 0.015,
-				image: require('assets/img/nft-page/nft.svg'),
-			},
-			{
-				id: 2,
-				title: 'World of Ukranian Women ',
-				description: `An NFT derived from the incredible WOW collection. The world of Ukrainan
-							women today is a warzone. This honors the brave women who are joining in
-							the fight for their freedom. Mint Limit is 10.`,
-				quantity: 1000,
-				donatedBy: '@Snowratcrash',
-				price: 0.03,
-				image: require('assets/img/nft-page/nft.svg'),
-			},
-			{
-				id: 3,
-				title: 'Zelensky Punk',
-				description: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors
-							all the Ukranian people who have found even the most makeshift ways to join
-							the fight for their coountry’s freedom.`,
-				quantity: 300,
-				donatedBy: '@jundoima',
-				price: 0.06,
-				image: require('assets/img/nft-page/nft.svg'),
-			},
-		],
+		nfts: dataSource
 	}),
 	async asyncData({ params }) {
 		const slug = params.slug

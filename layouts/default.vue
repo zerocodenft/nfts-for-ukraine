@@ -22,9 +22,9 @@ export default {
 	},
 	computed: {
 		checkBackgroundFrame() {
-			switch (this.$route.path) {
-				case '/nft-page': return 'nft-bg-frame'
-				default: return 'nft-page-bg-frame'
+			switch (this.$route.name) {
+				case 'nft-page-slug': return 'nft-bg-frame'
+				default: return 'home-bg-frame'
 			}
 		}
 	}

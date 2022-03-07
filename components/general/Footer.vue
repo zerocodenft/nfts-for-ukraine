@@ -3,11 +3,11 @@
 		<div class='footer__border d-flex flex-column flex-lg-row justify-content-between align-items-center'>
 			<span class="order-1 order-lg-0 text-center">Copyright 2022. Made with ❤ by ukrainians for ukrainians.</span>
 			<div class='footer__actions d-flex align-items-center order-0 order-lg-1 mb-4 mb-lg-0'>
-				<b-button variant='link' :href='$siteConfig.twitterURL' target='blank'>
-					<img width="50px" :src='require("@/assets/img/logos/twitter.svg")' alt='twitter'>
+				<b-button class='footer__actions-btn' variant='link' :href='$siteConfig.twitterURL' target='blank'>
+					<img width="50px" :src='require("@/assets/img/footer/twitter.svg")' alt='twitter'>
 				</b-button>
-				<b-button variant='link' :href='$siteConfig.marketplaceURL' target='blank'>
-					<img width="28px" :src='require("@/assets/img/logos/opensea.svg")' alt='opensea'>
+				<b-button class='footer__actions-btn' variant='link' :href='$siteConfig.marketplaceURL' target='blank'>
+					<img width="28px" :src='require("@/assets/img/footer/instagram.svg")' alt='opensea'>
 				</b-button>
 				<b-button variant='link' v-b-modal="'terms-and-condition'" class='footer__actions--link cursor-pointer'>Terms & Conditions</b-button>
 			</div>
@@ -37,6 +37,12 @@ export default {
 
 	&__actions {
 		gap: 1.5rem;
+		&-btn {
+			img {
+				width: 1.625rem;
+				height: 1.625rem;
+			}
+		}
 		&--link{
 			text-decoration: underline;
 			color: inherit;

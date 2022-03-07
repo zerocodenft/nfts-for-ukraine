@@ -15,6 +15,7 @@
 <script>
 import BlockHeader from '@/components/general/BlockHeader'
 import CollectionItem from '@/components/home/collection/CollectionItem'
+import { dataSource } from '@/data-source/dataSource'
 export default {
 	name: 'Collection',
 	components: {
@@ -22,37 +23,7 @@ export default {
 		CollectionItem
 	},
 	data: () => ({
-		nftList: [
-			{
-				slug: 'remarkable_ukrainian',
-				title: "Remarkable Ukrainian",
-				description: `Derived from Remarkable </br>Women #202 </br>Limited edition of 1000`,
-				price: "0.015 ETH",
-				nft: "main",
-			},
-			{
-				slug: 'world_of_ukrainian_women',
-				title: "World of Ukrainian Women",
-				description: `Derived from World of </br>Women #4865 </br>Limited edition of 1000`,
-				price: "0.03 ETH",
-				nft: "main"
-			},
-			{
-				slug: 'zelensky_punk',
-				title: "Zelensky Punk",
-				description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
-				price: "0.06 ETH",
-				nft: "main"
-			},
-			{
-				slug: 'coming_soon',
-				title: "Coming soon",
-				description: "",
-				price: "",
-				nft: "coming-soon",
-				placeholder: true
-			}
-		]
+		nftList: dataSource
 	})
 }
 </script>
