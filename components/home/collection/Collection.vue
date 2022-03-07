@@ -24,27 +24,28 @@ export default {
 	data: () => ({
 		nftList: [
 			{
-				id: 1,
+				slug: 'remarkable_ukrainian',
 				title: "Remarkable Ukrainian",
 				description: `Derived from Remarkable </br>Women #202 </br>Limited edition of 1000`,
 				price: "0.015 ETH",
 				nft: "main",
 			},
 			{
-				id: 2,
+				slug: 'world_of_ukrainian_women',
 				title: "World of Ukrainian Women",
 				description: `Derived from World of </br>Women #4865 </br>Limited edition of 1000`,
 				price: "0.03 ETH",
 				nft: "main"
 			},
 			{
-				id: 3,
+				slug: 'zelensky_punk',
 				title: "Zelensky Punk",
 				description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
 				price: "0.06 ETH",
 				nft: "main"
 			},
 			{
+				slug: 'coming_soon',
 				title: "Coming soon",
 				description: "",
 				price: "",

@@ -24,7 +24,7 @@ export default {
 		checkBackgroundFrame() {
 			switch (this.$route.path) {
 				case '/nft-page': return 'nft-bg-frame'
-				default: return 'home-bg-frame'
+				default: return 'nft-page-bg-frame'
 			}
 		}
 	}

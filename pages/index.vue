@@ -27,7 +27,7 @@ import Collection from '@/components/home/collection/Collection'
 import MintMixin from '@/mixins/mint'
 import WelcomePage from '@/components/home/welcome-page/WelcomePage'
 import Team from '@/components/home/our-team/Team'
-import FAQ from "~/components/home/FAQ/FAQ";
+import FAQ from "@/components/home/FAQ/FAQ";
 import PartnerWithUs from '@/components/home/partner-with-us/PartnerWithUs'
 
 export default {

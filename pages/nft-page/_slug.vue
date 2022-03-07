@@ -33,7 +33,7 @@
 				</div>
 				<b-button class="nft-page__share d-flex bg-transparent border-0 shadow-none align-items-center pl-0 pb-3 mb-4">
 					<div>
-						<img :src="require('@/assets/img/nft-page/share.svg')" />
+						<img :src="require('assets/img/nft-page/share.svg')" />
 					</div>
 					<span class='nft-page__share-text'>Share with Friends</span>
 				</b-button>
@@ -50,7 +50,7 @@
 							:disabled="count === 1"
 							@click="count--">
 							<img
-								:src="require('@/assets/img/nft-page/minus.svg')"
+								:src="require('assets/img/nft-page/minus.svg')"
 								alt="minus" />
 						</b-button>
 						<span class="px-2">{{ count }}</span>
@@ -67,7 +67,7 @@
 							:disabled="count === 10"
 							@click="count++">
 							<img
-								:src="require('@/assets/img/nft-page/plus.svg')"
+								:src="require('assets/img/nft-page/plus.svg')"
 								alt="plus" />
 						</b-button>
 					</div>
@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import BackButton from '../components/general/BackButton'
+import BackButton from '../../components/general/BackButton'
 import { ethers } from 'ethers'
 
 export default {
@@ -114,7 +114,7 @@ export default {
 				quantity: 1000,
 				donatedBy: '@Snowratcrash',
 				price: 0.015,
-				image: require('@/assets/img/nft-page/nft.svg'),
+				image: require('assets/img/nft-page/nft.svg'),
 			},
 			{
 				id: 2,
@@ -125,7 +125,7 @@ export default {
 				quantity: 1000,
 				donatedBy: '@Snowratcrash',
 				price: 0.03,
-				image: require('@/assets/img/nft-page/nft.svg'),
+				image: require('assets/img/nft-page/nft.svg'),
 			},
 			{
 				id: 3,
@@ -136,13 +136,17 @@ export default {
 				quantity: 300,
 				donatedBy: '@jundoima',
 				price: 0.06,
-				image: require('@/assets/img/nft-page/nft.svg'),
+				image: require('assets/img/nft-page/nft.svg'),
 			},
 		],
 	}),
+	async asyncData({ params }) {
+		const slug = params.slug
+		return { slug }
+	},
 	computed: {
 		nft() {
-			return this.nfts.find((x) => x.id === +this.$route.query.id) || {}
+			return this.nfts.find((x) => x.slug === this.slug) || {}
 		},
 	},
 	mounted() {
@@ -204,8 +208,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'assets/scss/main';
-@import 'assets/scss/variables';
+@import '../../assets/scss/main';
+@import '../../assets/scss/variables';
 
 .nft-page {
 	&__title {
