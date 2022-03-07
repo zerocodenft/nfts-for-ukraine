@@ -15,7 +15,7 @@
 			</div>
 			<div
 				class='welcome-page__actions d-flex justify-content-md-start justify-content-between flex-column flex-sm-row'>
-				<b-button class='brand-button' size='lg' variant='dark' @click="mintNFTs">MINT NOW</b-button>
+				<b-button class='brand-button px-5 py-2' variant='dark' @click="mintNFTs">MINT NOW</b-button>
 			</div>
 		</div>
 		<div>
@@ -51,6 +51,7 @@ export default {
 	&__text {
 		&--title {
 			@include fonts(normal, 800, 3.438rem, 'Neue Machina-800');
+			line-height: 3.626rem;
 			@media(max-width: 600px) {
 				font-size: clamp(1rem, 10vw, 2rem);
 				text-align: center;

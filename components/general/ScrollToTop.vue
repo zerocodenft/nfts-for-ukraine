@@ -1,11 +1,16 @@
 <template>
+<div
+	class="scroll-to-top d-flex align-items-center flex-column"
+	v-if="isVisible"
+>
 	<b-img
-		v-if="isVisible"
 		class="scroll-to-top-image cursor-pointer"
 		src="@/assets/img/to-top-scroll-frame.svg"
 		alt="scroll to top"
 		@click="scrollToTop"
 	/>
+	<span class="scroll-to-top-text mt-n2">TO TOP</span>
+</div>
 </template>
 
 <script>
@@ -33,9 +38,17 @@ export default {
 </script>
 
 <style lang="scss">
-.scroll-to-top-image {
+@import 'assets/scss/mixins';
+.scroll-to-top {
 	position: sticky;
 	bottom: 30px;
+	width: 4rem;
 	left: calc(100% - 80px);
+	&-image {
+		width: 3rem !important;
+	}
+	&-text {
+		@include fonts(normal, normal, clamp(.7rem, 2.5vw, .8rem), 'Neue Machina-300')
+	}
 }
 </style>

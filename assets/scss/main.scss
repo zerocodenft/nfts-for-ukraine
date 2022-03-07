@@ -14,6 +14,8 @@ body {
 	color: $brand-primary;
 	scroll-behavior: smooth;
 	font-family: "Neue Machina-bold", sans-serif;
+	line-height: 1.44rem;
+
 	&.modal-open {
 		overflow: hidden;
 	}

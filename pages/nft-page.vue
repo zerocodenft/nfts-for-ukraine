@@ -31,12 +31,12 @@
 						>{{ nft.donatedBy }}</b-link
 					>
 				</div>
-				<div class="nft-page__share d-flex align-items-center pb-3 mb-4">
+				<b-button class="nft-page__share d-flex bg-transparent border-0 shadow-none align-items-center pl-0 pb-3 mb-4">
 					<div>
 						<img :src="require('@/assets/img/nft-page/share.svg')" />
 					</div>
-					<div>Share with Friends</div>
-				</div>
+					<span class='nft-page__share-text'>Share with Friends</span>
+				</b-button>
 				<div class="nft-page__counter d-flex align-items-center">
 					<div
 						class="
@@ -46,18 +46,19 @@
 							cursor-pointer
 						">
 						<b-button
-							class="action d-flex align-items-center justify-content-center"
+							class="action shadow-none d-flex align-items-center border-0 justify-content-center"
 							:disabled="count === 1"
 							@click="count--">
 							<img
 								:src="require('@/assets/img/nft-page/minus.svg')"
 								alt="minus" />
 						</b-button>
-						{{ count }}
+						<span class="px-2">{{ count }}</span>
 						<b-button
 							variant="transparent"
 							class="
 								action
+								shadow-none
 								d-flex
 								align-items-center
 								justify-content-center
@@ -108,7 +109,7 @@ export default {
 				id: 1,
 				title: 'Remarkable Ukrainian Woman',
 				description: `The Remarkable Women Collection, reimagined to honor Ukrainian women,
-							who are fighting on the front lines, providing care for others, and trying 
+							who are fighting on the front lines, providing care for others, and trying
 							to get their children and loved ones to safety. Mint limit is 10.`,
 				quantity: 1000,
 				donatedBy: '@Snowratcrash',
@@ -118,18 +119,18 @@ export default {
 			{
 				id: 2,
 				title: 'World of Ukranian Women ',
-				description: `An NFT derived from the incredible WOW collection. The world of Ukrainan 
-							women today is a warzone. This honors the brave women who are joining in 
+				description: `An NFT derived from the incredible WOW collection. The world of Ukrainan
+							women today is a warzone. This honors the brave women who are joining in
 							the fight for their freedom. Mint Limit is 10.`,
 				quantity: 1000,
-				donatedBy: '@',
+				donatedBy: '@Snowratcrash',
 				price: 0.03,
 				image: require('@/assets/img/nft-page/nft.svg'),
 			},
 			{
 				id: 3,
 				title: 'Zelensky Punk',
-				description: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors  
+				description: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors
 							all the Ukranian people who have found even the most makeshift ways to join
 							the fight for their coountry’s freedom.`,
 				quantity: 300,
@@ -204,6 +205,7 @@ export default {
 
 <style scoped lang="scss">
 @import 'assets/scss/main';
+@import 'assets/scss/variables';
 
 .nft-page {
 	&__title {
@@ -224,10 +226,14 @@ export default {
 	}
 	&__sub {
 		@include fonts(normal, 800, 1.25rem, 'Neue Machina-800');
+		color: $dark;
 	}
 	&__share {
 		gap: 0.5rem;
 		@include fonts(normal, 800, 1rem, 'Neue Machina-800');
+		&-text {
+			color: $dark;
+		}
 	}
 	&__price {
 		@include fonts(normal, 700, 2rem, 'Oxanium');

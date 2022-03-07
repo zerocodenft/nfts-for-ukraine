@@ -54,12 +54,7 @@ export default {
 		@include fonts(normal, 300, 1.25rem, 'Oxanium');
 	}
 	&__description {
-		@include fonts(normal, 300, 1.25rem, 'Neue Machina-300');
-		line-height: 1.2rem;
-
-		@media (max-width: 1100px) {
-			font-size: clamp(0.5rem, 0.75rem, 1rem);
-		}
+		@include fonts(normal, 300, clamp(.85rem, 2.5vw, 1.25rem), 'Neue Machina-300');
 	}
 	&__content {
 		max-width: 840px;

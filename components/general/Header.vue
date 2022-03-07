@@ -6,7 +6,11 @@
 					NFT UA
 				</div>
 			</b-navbar-brand>
-			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+			<b-navbar-toggle class="header__container__toggle bg-transparent text-dark h1" target="nav-collapse">
+				<template #default="{ expanded }">
+					<b-icon icon="justify" />
+				</template>
+			</b-navbar-toggle>
 			<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
 				<b-navbar-nav class=" d-flex justify-content-center align-items-center">
 					<b-nav-item
@@ -84,6 +88,9 @@ export default {
 
 	&__container {
 		border-bottom: $dark 2px solid;
+		&__toggle {
+			font-size: 1.8rem !important;
+		}
 	}
 
 	&__link {
@@ -91,7 +98,10 @@ export default {
 			outline: none;
 			color: $dark !important;
 			line-height: 1.2rem;
-			@include fonts(normal, 300, 1.25rem, "Neue Machina-300")
+			@include fonts(normal, 300, 1.25rem, "Neue Machina-300");
+			&:hover {
+				@include fonts(normal, normal, 1.25rem, "Neue Machina-bold");
+			}
 		}
 	}
 	&__brand {

@@ -78,7 +78,7 @@ export default {
 	},
 
 	bootstrapVue: {
-		icons: false,
+		icons: true,
 	},
 
 	sitemap: {

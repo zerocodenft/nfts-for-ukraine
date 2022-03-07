@@ -38,18 +38,18 @@ export default {
 
 <style lang='scss'>
 @import "assets/scss/main";
-
 .content {
 	&__text {
 		&-wallet {
-			@include fonts(normal, 400, clamp(.6rem, 2.5vw,  1.25rem), "Neue Machina-800");
+			@include fonts(normal, 400, clamp(.9rem, 2.5vw,  1.25rem), "Neue Machina-800");
+			word-break: break-word;
 		}
-		@include fonts(normal, 400, 1.25rem, "Neue Machina-300");
+		@include fonts(normal, 400, clamp(.9rem, 2.5vw,  1.25rem), "Neue Machina-300");
 	}
 
 	&__header {
 		line-height: 1.9rem;
-		@include fonts(normal, 800, 1.75rem, "Neue Machina-bold")
+		@include fonts(normal, 800, clamp(1.5rem, 2.5vw,  1.75rem), "Neue Machina-bold")
 	}
 }
 </style>

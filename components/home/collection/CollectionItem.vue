@@ -1,8 +1,10 @@
 <template>
 	<div class='collection-items-wrapper__card mx-2 py-4 my-3 position-relative d-flex flex-column justify-content-between'>
 		<div class="collection-items-wrapper__card__nft">
+		<router-link :to="`/nft-page?id=${collection.id}`">
 			<b-img :class="['w-100 h-100', collection.placeholder && 'blurred']" :src='require(`@/assets/img/nfts/${collection.nft}.svg`)' />
 			<span v-if='!collection.placeholder' class='text-white position-absolute collection-items-wrapper__card__nft-price text-nowrap p-3'>{{collection.price}}</span>
+		</router-link>
 		</div>
 		<div class='collection-items-wrapper__card__action'>
 			<b-row class='no-gutter flex-column px-3'>

@@ -2,7 +2,7 @@
 	<b-col cols='12'>
 		<BlockHeader>
 			<template #title>
-				<span class='title d-flex text-black align-items-center pl-2'>FAQs</span>
+				<span class='title d-flex text-black align-items-center pl-2'>FAQ's</span>
 			</template>
 		</BlockHeader>
 
