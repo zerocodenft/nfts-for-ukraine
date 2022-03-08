@@ -45,7 +45,7 @@
 							:key='index'
 							:title='nft.title'
 							:description='nft.descriptionPage'
-							:url='$router.currentRoute.fullPath'
+							:url='window.location.href'
 						>
 							<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
 						</ShareSocial>

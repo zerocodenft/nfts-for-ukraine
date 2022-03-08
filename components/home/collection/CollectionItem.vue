@@ -31,7 +31,7 @@
 								:key='index'
 								:title='collection.title'
 								:description='collection.description'
-								:url='`/nft-page/${collection.slug}`'
+								:url='`${window.location.href}/nft-page/${collection.slug}`'
 							>
 								<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
 							</ShareSocial>
