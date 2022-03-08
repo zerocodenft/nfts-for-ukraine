@@ -71,6 +71,7 @@ export default {
 		'bootstrap-vue/nuxt',
 		'@nuxtjs/sitemap',
 		'@nuxtjs/axios',
+		'vue-social-sharing/nuxt',
 	],
 
 	axios: {

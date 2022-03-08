@@ -31,6 +31,16 @@ body {
 		padding: 0 3%;
 	}
 }
+.share-popup{
+	.arrow{
+		&:before{
+			border-width: 0;
+		}
+	}
+	&__wrapper{
+		gap: .5rem;
+	}
+}
 .brand-button {
 	background: $brand-primary;
 	color: white;

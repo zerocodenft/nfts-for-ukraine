@@ -31,12 +31,26 @@
 						>{{ nft.donatedBy }}</b-link
 					>
 				</div>
-				<b-button class="nft-page__share d-flex bg-transparent border-0 shadow-none align-items-center pl-0 pb-3 mb-4">
+				<b-button id='share-button' class="nft-page__share d-flex bg-transparent border-0 shadow-none align-items-center pl-0 mb-4">
 					<div>
 						<img :src="require('assets/img/nft-page/share.svg')" />
 					</div>
 					<span class='nft-page__share-text'>Share with Friends</span>
 				</b-button>
+				<b-popover custom-class='share-popup border-0' placement='top' target="share-button" triggers="hover">
+					<div class='d-flex share-popup__wrapper'>
+						<ShareSocial
+							v-for='(network, index) in socialMedia'
+							:network='network'
+							:key='index'
+							:title='nft.title'
+							:description='nft.descriptionPage'
+							:url='$router.currentRoute.fullPath'
+						>
+							<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
+						</ShareSocial>
+					</div>
+				</b-popover>
 				<div class="nft-page__counter d-flex align-items-center">
 					<div
 						class="
@@ -97,15 +111,17 @@
 import BackButton from '../../components/general/BackButton'
 import { ethers } from 'ethers'
 import { dataSource } from '../../data-source/dataSource'
+import ShareSocial from '../../components/general/ShareSocial'
 
 export default {
 	name: 'nft-page',
-	components: { BackButton },
+	components: { ShareSocial, BackButton },
 	data: () => ({
 		count: 1,
 		mintedCount: 0,
 		isBusy: false,
-		nfts: dataSource
+		nfts: dataSource,
+		socialMedia: ['linkedIn', 'twitter'],
 	}),
 	async asyncData({ params }) {
 		const slug = params.slug

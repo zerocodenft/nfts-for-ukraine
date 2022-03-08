@@ -19,6 +19,7 @@
     "ethers": "5.5.1",
     "merkletreejs": "^0.2.30",
     "nuxt": "^2.15.7",
+    "vue-social-sharing": "^3.0.9",
     "vue2-perfect-scrollbar": "^1.5.5"
   },
   "devDependencies": {

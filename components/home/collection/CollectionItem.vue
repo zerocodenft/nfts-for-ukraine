@@ -20,9 +20,23 @@
 					<b-button :disabled='collection.placeholder' class='collection-items-wrapper__card__action-buy w-100 border-0 shadow-none' :to="`/nft-page/${collection.slug}`">MINT</b-button>
 				</b-col>
 				<b-col class='col-3'>
-					<b-button :disabled='collection.placeholder' class='collection-items-wrapper__card__action-share shadow-none border-0 p-0 bg-transparent w-100'>
+					<b-button :id='`share-button-${collection.slug}`' :disabled='collection.placeholder' class='collection-items-wrapper__card__action-share shadow-none border-0 p-0 bg-transparent w-100'>
 						<b-img src='@/assets/img/collection-share.svg' />
 					</b-button>
+					<b-popover custom-class='share-popup border-0' placement='top' :target="`share-button-${collection.slug}`" triggers="hover">
+						<div class='d-flex share-popup__wrapper'>
+							<ShareSocial
+								v-for='(network, index) in socialMedia'
+								:network='network'
+								:key='index'
+								:title='collection.title'
+								:description='collection.description'
+								:url='`/nft-page/${collection.slug}`'
+							>
+								<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
+							</ShareSocial>
+						</div>
+					</b-popover>
 				</b-col>
 			</b-row>
 		</div>
@@ -30,12 +44,19 @@
 </template>
 
 <script>
+import ShareSocial from '../../general/ShareSocial'
 export default {
 	name: 'CollectionItem',
+	components: { ShareSocial },
 	props: {
 		collection: {
 			type: Object,
 			default: () => {}
+		}
+	},
+	data(){
+		return {
+			socialMedia: ['linkedIn', 'twitter'],
 		}
 	}
 }
