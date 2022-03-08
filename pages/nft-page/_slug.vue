@@ -121,7 +121,7 @@ export default {
 		mintedCount: 0,
 		isBusy: false,
 		nfts: dataSource,
-		socialMedia: ['linkedIn', 'twitter'],
+		socialMedia: ['linkedin', 'twitter'],
 	}),
 	async asyncData({ params }) {
 		const slug = params.slug

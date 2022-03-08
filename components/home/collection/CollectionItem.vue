@@ -56,7 +56,7 @@ export default {
 	},
 	data(){
 		return {
-			socialMedia: ['linkedIn', 'twitter'],
+			socialMedia: ['linkedin', 'twitter'],
 		}
 	}
 }
