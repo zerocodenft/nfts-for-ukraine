@@ -1,6 +1,6 @@
 export const dataSource = [
 	{
-		slug: 'remarkable_ukrainian',
+		slug: 'remarkable-ukrainian',
 		title: "Remarkable Ukrainian",
 		description: `Derived from Remarkable </br>Women #202 </br>Limited edition of 1000`,
 		price: "0.015 ETH",
@@ -13,7 +13,7 @@ export const dataSource = [
 		image: require('@/assets/img/nft-page/nft.svg'),
 	},
 	{
-		slug: 'world_of_ukrainian_women',
+		slug: 'world-of-ukrainian-women',
 		title: "World of Ukrainian Women",
 		description: `Derived from World of </br>Women #4865 </br>Limited edition of 1000`,
 		price: "0.03 ETH",
@@ -26,7 +26,7 @@ export const dataSource = [
 		image: require('@/assets/img/nft-page/nft.svg'),
 	},
 	{
-		slug: 'zelensky_punk',
+		slug: 'zelensky-punk',
 		title: "Zelensky Punk",
 		description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
 		price: "0.06 ETH",
