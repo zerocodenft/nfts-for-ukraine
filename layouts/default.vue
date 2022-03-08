@@ -38,7 +38,7 @@ export default {
 .nft-bg-frame {
 	background: url("~/assets/img/nft-page/nft-bg-frame.png") top no-repeat;
 	background-size: 100% 100%;
-	height: 100%;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
