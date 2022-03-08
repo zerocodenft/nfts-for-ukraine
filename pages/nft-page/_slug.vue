@@ -98,8 +98,8 @@
 					justify-content-center
 					align-items-end
 				">
-				<div class="nft-page__price pt-4 mb-5">{{ nft.price }}</div>
-				<div>
+				<div class="nft-page__price pt-4 mb-4 mb-md-5">{{ nft.price }}</div>
+				<div class='d-flex w-100 justify-content-center d-md-block'>
 					<img :src="nft.image" alt="nft" />
 				</div>
 			</div>
