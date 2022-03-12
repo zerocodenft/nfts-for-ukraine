@@ -13,9 +13,9 @@
 				label='Enter your name'
 				label-for='input-1'
 			>
-				<div class='partner-with-us__input-group'>
+				<div class='partner-with-us__input-group position-relative'>
 					<label
-						class='partner-with-us__label required'
+						class='partner-with-us__label required position-absolute'
 						for='email'
 					>
 						Email
@@ -49,9 +49,9 @@
 					/>
 				</div>
 
-				<div class='partner-with-us__input-group'>
+				<div class='partner-with-us__input-group position-relative'>
 					<label
-						class='partner-with-us__label'
+						class='partner-with-us__label position-absolute'
 						for='textarea'
 					>
 						Collection Description
