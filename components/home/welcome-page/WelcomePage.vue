@@ -63,7 +63,7 @@ export default {
 	&__text {
 		&--title {
 			@include fonts(normal, 800, 3.438rem, 'Neue Machina-800');
-			line-height: 3.626rem;
+			line-height: clamp(2.5rem, 10vw, 3.6rem);
 			@media(max-width: 600px) {
 				font-size: clamp(1rem, 10vw, 2rem);
 				text-align: center;
