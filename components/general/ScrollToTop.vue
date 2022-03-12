@@ -1,7 +1,6 @@
 <template>
 	<div
 		class='scroll-to-top d-flex align-items-center flex-column'
-		v-if='isVisible'
 	>
 		<b-img
 			class='scroll-to-top-image cursor-pointer'
@@ -9,7 +8,7 @@
 			alt='scroll to top'
 			@click='scrollToTop'
 		/>
-		<span class='scroll-to-top-text mt-n2'>TO TOP</span>
+		<span class='scroll-to-top-text mt-n2'>{{ isVisible ? 'TO TOP' : 'SCROLL' }}</span>
 	</div>
 </template>
 

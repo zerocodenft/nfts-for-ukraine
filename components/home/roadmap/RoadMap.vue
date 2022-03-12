@@ -46,7 +46,7 @@ export default {
 @import 'assets/scss/main';
 .roadmap {
 	&__item {
-		max-width: 1084px;
+		//max-width: 1084px;
 	}
 	&__title {
 		flex-basis: 25%;
@@ -57,7 +57,7 @@ export default {
 		@include fonts(normal, 300, clamp(.85rem, 2.5vw, 1.25rem), 'Neue Machina-300');
 	}
 	&__content {
-		max-width: 840px;
+		//max-width: 840px;
 	}
 	&__line {
 		padding: 0 6%;

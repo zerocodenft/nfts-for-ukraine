@@ -13,34 +13,58 @@
 				label='Enter your name'
 				label-for='input-1'
 			>
-				<b-form-input
-					id='email'
-					class='shadow-none mt-2'
-					placeholder='Email *'
-					:class='{"is-invalid": !isValidEmail}'
-					@blur='checkValidInput'
-					v-model='formData.email'
-					required
-					trim
-				/>
-				<b-form-invalid-feedback id="email">
-					Please enter the email
-				</b-form-invalid-feedback>
-				<b-form-input
-					id='input-2'
-					class='shadow-none mt-4'
-					v-model='formData.website'
-					placeholder='Website'
-					trim
-				/>
-				<b-form-textarea
-					id="textarea"
-					class='mt-4 shadow-none'
-					v-model='formData.message'
-					placeholder="Collection Description"
-					rows="3"
-					no-resize
-				/>
+				<div class='partner-with-us__input-group'>
+					<label
+						class='partner-with-us__label required'
+						for='email'
+					>
+						Email
+					</label>
+					<b-form-input
+						id='email'
+						class='shadow-none mt-2'
+						:class='{"is-invalid": !isValidEmail}'
+						@blur='checkValidInput'
+						v-model='formData.email'
+						required
+						trim
+					/>
+					<b-form-invalid-feedback id="email">
+						Please enter the email
+					</b-form-invalid-feedback>
+				</div>
+
+				<div class='partner-with-us__input-group position-relative'>
+					<label
+						class='partner-with-us__label position-absolute'
+						for='input-2'
+					>
+						Website
+					</label>
+					<b-form-input
+						id='input-2'
+						class='shadow-none mt-4'
+						v-model='formData.website'
+						trim
+					/>
+				</div>
+
+				<div class='partner-with-us__input-group'>
+					<label
+						class='partner-with-us__label'
+						for='textarea'
+					>
+						Collection Description
+					</label>
+
+					<b-form-textarea
+						id="textarea"
+						class='mt-4 shadow-none'
+						v-model='formData.message'
+						rows="3"
+						no-resize
+					/>
+				</div>
 			</b-form-group>
 			<b-button @click='sendFormData' class='partner-with-us__form-send shadow-none p-2 border-0'>Send</b-button>
 		</div>
@@ -91,8 +115,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-@import '@/assets/scss/mixins';
-@import '@/assets/scss/variables';
+@import '~@/assets/scss/mixins';
+@import '~@/assets/scss/variables';
 .partner-with-us {
 	@media (min-width: 776px) {
 		width: 75%;
@@ -104,6 +128,33 @@ export default {
 		&-send {
 			background: $dark;
 			width: clamp(8rem, 12vw, 12rem);
+		}
+	}
+
+	&__input-group {
+		textarea,
+		input {
+			height: 56px;
+			padding: 28px 16px 5px;
+			border: 1px solid #B3BCCA;
+			@include fonts(normal, bold, 0.875rem, 'Neue Machina-bold');
+			color: #030D18;
+		}
+
+		textarea {
+			height: 112px;
+		}
+	}
+
+	&__label {
+		left: 16px;
+		top: 8px;
+		@include fonts(normal, bold, 0.75rem, 'Neue Machina-bold');
+		color: #030D18;
+
+		&.required::after {
+			content: " *";
+			color: #FA2324;
 		}
 	}
 }

@@ -54,7 +54,7 @@ export default {
 			},
 			{
 				isToggle: false,
-				title: 'What is NFT?',
+				title: 'What is an NFT?',
 				description:
 					`NFTs represent unique assets. They are non-fungible because each NFT’s value is based on its unique properties and features. When an NFT is created (or “minted”) and then sold, the purchaser owns that NFT and can sell it as they would any other item they own.`
 			},

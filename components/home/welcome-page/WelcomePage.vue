@@ -1,6 +1,9 @@
 <template>
-	<div id='welcome-page'
-			 class='welcome-page d-flex flex-md-row flex-column-reverse w-100 align-items-center justify-content-around'>
+	<div
+		ref='welcome-page'
+		id='welcome-page'
+		class='welcome-page d-flex flex-md-row flex-column-reverse w-100 align-items-center justify-content-around'
+	>
 		<div class='welcome-page__text d-flex flex-column'>
 			<div class='welcome-page__text--title'>
 				Ape in to Support Ukraine.<br />
@@ -30,17 +33,26 @@ export default {
 	methods: {
 		mintNFTs() {
 			document.getElementById("collectionItems").scrollIntoView()
-		}
+		},
+		addTopGap() {
+			const { clientHeight } = document.getElementById("header")
+			this.$refs['welcome-page'].style.marginTop = `${clientHeight}px`
+		},
+	},
+	mounted() {
+		this.addTopGap()
 	}
 }
 </script>
 
 <style scoped lang='scss'>
-@import '@/assets/scss/mixins';
+@import '~@/assets/scss/mixins';
 
 .welcome-page {
 	gap: 1.75rem;
-	padding-bottom: 6rem;
+	@media (min-width: 769px) {
+		padding-bottom: 6rem;
+	}
 
 	&__image {
 		@media(max-width: 600px) {

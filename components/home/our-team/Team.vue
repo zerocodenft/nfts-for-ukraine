@@ -30,7 +30,8 @@ export default {
 					about: 'Smart_contract & Web3 </br> Ivano_Frankivsk, </br> Ukraine',
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/ibodnarchuk/',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/Ihor1.png')
 				},
 				{
 					firstName: 'Mykhailo',
@@ -38,7 +39,8 @@ export default {
 					about: 'Software_engineer </br>Lviv, </br> Ukraine',
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/mykhailo-diakovych/',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/Mikhailo.png')
 				},
 				{
 					firstName: 'Serge',
@@ -46,7 +48,8 @@ export default {
 					about: 'Product_Designer </br>Lutsk, </br> Ukraine',
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/skhaiba/',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/Serge.png')
 				},
 				{
 					firstName: 'Anna',
@@ -54,7 +57,8 @@ export default {
 					about: 'Marketing </br>Odessa, </br> Ukraine',
 					social: 'twitter',
 					url: 'https://twitter.com/anna_gandrabura',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/Anna.png')
 				},
 				{
 					firstName: 'Igor',
@@ -62,7 +66,8 @@ export default {
 					about: 'Graphic_designer </br>Uknown_city, </br> Ukraine',
 					social: 'linkedIn',
 					url: '#',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/Ihor.png')
 				},
 				{
 					firstName: 'Sarah',
@@ -70,7 +75,8 @@ export default {
 					about: 'Strategy </br>Miami, </br> USA',
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/sarahnohe/',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/Sarah.png')
 				},
 				{
 					firstName: 'quasi Digi',
@@ -78,7 +84,8 @@ export default {
 					about: 'Artist </br>Unknown_city, </br> Country',
 					social: 'twitter',
 					url: 'https://twitter.com/quasidigi',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/QuasiDigi.png')
 				},
 				{
 					firstName: 'William',
@@ -86,7 +93,8 @@ export default {
 					about: 'Communications </br>New York, </br> USA',
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/bywilliamfreedman/',
-					rotate: '8.67'
+					rotate: '0',
+					photo: require('@/assets/img/home/team/William.png')
 				},
 			]
 		}
@@ -97,16 +105,20 @@ export default {
 <style scoped lang='scss'>
 .team {
 	gap: 3rem;
-	margin-top: 5rem;
+	@media(min-width: 769px) {
+		margin-top: 5rem;
+	}
+
 	&__list{
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		gap: 3.5rem;
 		@media(max-width: 879px){
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media(max-width: 600px){
-			grid-template-columns: 1fr
+			gap: 3.5rem 1.5rem;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 }

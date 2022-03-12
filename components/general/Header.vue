@@ -1,15 +1,20 @@
 <template>
-	<div class="header nft-container w-100 z-index-1 position-sticky pt-2 pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
-		<b-navbar class="header__container mx-auto px-0 pb-2 pb-sm-4 z-index-1 w-100 d-flex align-items-center" toggleable="lg" type="dark">
+	<div id="header" class="header nft-container w-100 z-index-1 position-fixed pt-2 pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
+		<b-navbar class="header__container mx-auto px-0 pb-2 pb-sm-4 w-100 z-index-1 d-flex align-items-start" toggleable="lg" type="dark">
 			<b-navbar-brand class="header__brand" to="/">
 				<div class=" mr-xl-5">
 					NFT UA
 				</div>
 			</b-navbar-brand>
-			<b-navbar-toggle class="header__container__toggle bg-transparent text-dark h1" target="nav-collapse">
-				<template #default="{ expanded }">
-					<b-icon icon="justify" />
-				</template>
+			<b-navbar-toggle
+				class="header__container__toggle bg-transparent p-0 mt-2"
+				target="nav-collapse"
+			>
+				<div class="d-flex flex-column justify-content-between align-items-end position-relative">
+					<span class='d-block'></span>
+					<span class='d-block'></span>
+					<span class='d-block'></span>
+				</div>
 			</b-navbar-toggle>
 			<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
 				<b-navbar-nav class=" d-flex justify-content-center align-items-center">
@@ -22,6 +27,7 @@
 						@click.passive="scrollToContent(headerItem.id)"
 					>
 						{{ headerItem.title }}
+						<span>{{ headerItem.title }}</span>
 					</b-nav-item>
 				</b-navbar-nav>
 				<div class="d-flex justify-content-center z-index-1 order-1">
@@ -69,6 +75,8 @@ export default {
 @import "assets/scss/main";
 .header {
 	top: 0;
+	left: 0;
+	right: 0;
 	background: transparent;
 	.navbar {
 		background: url("../../assets/img/header-bg-frame.svg");
@@ -87,19 +95,67 @@ export default {
 	}
 
 	&__container {
-		border-bottom: $dark 2px solid;
 		&__toggle {
-			font-size: 1.8rem !important;
+			& > div {
+				height: 17px;
+				width: 22px;
+				transition: all .5s;
+
+				span {
+					height: 3px;
+					width: 100%;
+					background-color: #000;
+					border-radius: 1rem;
+					transition: all .5s;
+
+					&:last-of-type {
+						width: 70%;
+					}
+				}
+			}
+
+			&.not-collapsed > div {
+				height: 18px;
+
+				span {
+					width: 100%;
+
+					&:first-of-type {
+						transform-origin: right top;
+						transform: rotate(-45deg);
+					}
+
+					&:nth-of-type(2) {
+						opacity: 0;
+					}
+
+					&:last-of-type {
+						transform-origin: right bottom;
+						transform: rotate(45deg);
+					}
+				}
+			}
 		}
 	}
 
 	&__link {
 		.nav-link {
+			color: transparent !important;
 			outline: none;
-			color: $dark !important;
 			line-height: 1.2rem;
 			@include fonts(normal, 300, 1.25rem, "Neue Machina-300");
-			&:hover {
+			position: relative;
+
+			span {
+				position: absolute;
+				left: 8px;
+				top: 8px;
+				color: $dark !important;
+				line-height: 1.2rem;
+				@include fonts(normal, normal, 1.25rem, "Neue Machina-300");
+			}
+
+			&:hover span {
 				@include fonts(normal, normal, 1.25rem, "Neue Machina-bold");
 			}
 		}
@@ -110,8 +166,25 @@ export default {
 		line-height: 2.3rem;
 		@include fonts(normal, 800, 2.5rem, "Neue Machina-bold")
 	}
-	.navbar-toggler {
-		background: $brand-primary;
+	.navbar {
+		&-toggler {
+			background: $brand-primary;
+		}
+
+		&-collapse {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 106%;
+				left: -3%;
+				top: 0;
+				background: url("../../assets/img/header-bg-frame.svg");
+				z-index: -1;
+			}
+		}
 	}
 }
 </style>

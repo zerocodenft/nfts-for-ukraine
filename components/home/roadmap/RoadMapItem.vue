@@ -19,6 +19,7 @@
 			</div>
 			<div
 				class="roadmap__description"
+				:class="[left ? 'pr-lg-5' : 'pl-lg-5']"
 			>
 				{{ item.text }}
 			</div>
