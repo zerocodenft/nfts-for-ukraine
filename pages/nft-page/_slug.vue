@@ -100,7 +100,7 @@
 				">
 				<div class="nft-page__price pt-4 mb-4 mb-md-5">{{ nft.price }}</div>
 				<div class='d-flex w-100 justify-content-center d-md-block'>
-					<img :src="nft.image" alt="nft" />
+					<img :src="nft.image" alt="nft" class='nft-page__main-image'/>
 				</div>
 			</div>
 		</div>
@@ -224,6 +224,9 @@ export default {
 	}
 	&__price {
 		@include fonts(normal, 700, 2rem, 'Oxanium');
+	}
+	&__main-image {
+		max-width: 322px;
 	}
 	&__counter {
 		gap: 2rem;

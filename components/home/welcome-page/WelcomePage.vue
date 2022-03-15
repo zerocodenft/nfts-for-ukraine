@@ -1,6 +1,5 @@
 <template>
 	<div
-		ref='welcome-page'
 		id='welcome-page'
 		class='welcome-page d-flex flex-md-row flex-column-reverse w-100 align-items-center justify-content-around'
 	>
@@ -34,14 +33,7 @@ export default {
 		mintNFTs() {
 			document.getElementById("collectionItems").scrollIntoView()
 		},
-		addTopGap() {
-			const { clientHeight } = document.getElementById("header")
-			this.$refs['welcome-page'].style.marginTop = `${clientHeight}px`
-		},
 	},
-	mounted() {
-		this.addTopGap()
-	}
 }
 </script>
 

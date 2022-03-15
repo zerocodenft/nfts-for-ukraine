@@ -1,6 +1,6 @@
 <template>
-	<div id="header" class="header nft-container w-100 z-index-1 position-fixed pt-2 pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
-		<b-navbar class="header__container mx-auto px-0 pb-2 pb-sm-4 w-100 z-index-1 d-flex align-items-center" toggleable="lg" type="dark">
+	<div id="header" class="header nft-container w-100 z-index-1 position-sticky pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
+		<b-navbar class="header__container mx-auto px-0 w-100 z-index-1 d-flex align-items-center" toggleable="lg" type="dark">
 			<b-navbar-brand class="header__brand mt-md-1" to="/">
 				<div class=" mr-xl-5">
 					<b-img src='@/assets/img/logos/logo.svg' />
@@ -78,9 +78,6 @@ export default {
 	left: 0;
 	right: 0;
 	background: transparent;
-	.navbar {
-		background: url("../../assets/img/header-bg-frame.svg");
-	}
 	&:before {
 		content: '';
 		background: url("../../assets/img/header-bg-frame.svg");
@@ -90,7 +87,7 @@ export default {
 		left: 0;
 		top: 0;
 		@media (max-width: 600px) {
-			height: 73px !important;
+			height: 78px !important;
 		}
 	}
 
