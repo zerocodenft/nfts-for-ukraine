@@ -33,7 +33,7 @@ export default {
 				url: url,
 				title: title,
 				description: description,
-				mainImage: `${url}/${iconName}`,
+				mainImage: iconName,
 			}),
 		],
 		link: [

@@ -2,7 +2,7 @@
 	"title": "Ape in For Ukraine",
 	"description": "Join people around the world in using the power of cryptocurrency to undermine Putin’s efforts of destruction",
 	"url": "https://apeinforukraine.com",
-	"iconName": "preview.svg",
+	"iconName": "/preview.svg",
 	"checkWhitelistedUrl": "https://zerocodenft-functions.azurewebsites.net/api/checkwhitelisted",
 	"dropDate": null,
 	"instagramURL": null,
