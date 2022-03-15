@@ -10,7 +10,7 @@ export const dataSource = [
 							to get their children and loved ones to safety. Mint limit is 10.`,
 		quantity: 1000,
 		donatedBy: '@Snowratcrash',
-		image: require('@/assets/img/nft-page/nft.svg'),
+		image: require('@/assets/img/nft-page/remarkable_ukrainian.png'),
 	},
 	{
 		slug: 'world-of-ukrainian-women',
@@ -23,7 +23,7 @@ export const dataSource = [
 							the fight for their freedom. Mint Limit is 10.`,
 		quantity: 1000,
 		donatedBy: '@Snowratcrash',
-		image: require('@/assets/img/nft-page/nft.svg'),
+		image: require('@/assets/img/nft-page/world_of_ukrainian_women.png'),
 	},
 	{
 		slug: 'zelensky-punk',
@@ -36,7 +36,7 @@ export const dataSource = [
 							the fight for their coountry’s freedom.`,
 		quantity: 300,
 		donatedBy: '@jundoima',
-		image: require('@/assets/img/nft-page/nft.svg'),
+		image: require('@/assets/img/nft-page/fuck.png'),
 	},
 	{
 		slug: 'coming_soon',
@@ -47,7 +47,7 @@ export const dataSource = [
 		price: "",
 		nft: "coming-soon",
 		donatedBy: "",
-		image: "",
+		image: require(`@/assets/img/nft-page/nft.svg`),
 		placeholder: true
 	}
 ]

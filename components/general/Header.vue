@@ -1,9 +1,9 @@
 <template>
 	<div id="header" class="header nft-container w-100 z-index-1 position-fixed pt-2 pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
-		<b-navbar class="header__container mx-auto px-0 pb-2 pb-sm-4 w-100 z-index-1 d-flex align-items-start" toggleable="lg" type="dark">
-			<b-navbar-brand class="header__brand" to="/">
+		<b-navbar class="header__container mx-auto px-0 pb-2 pb-sm-4 w-100 z-index-1 d-flex align-items-center" toggleable="lg" type="dark">
+			<b-navbar-brand class="header__brand mt-md-1" to="/">
 				<div class=" mr-xl-5">
-					NFT UA
+					<b-img src='@/assets/img/logos/logo.svg' />
 				</div>
 			</b-navbar-brand>
 			<b-navbar-toggle
