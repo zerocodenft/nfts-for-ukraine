@@ -1,9 +1,10 @@
 export const dataSource = [
 	{
+		id: 1,
 		slug: 'remarkable-ukrainian',
 		title: "Remarkable Ukrainian",
 		description: `Derived from Remarkable </br>Women #202 </br>Limited edition of 1000`,
-		price: "0.015 ETH",
+		price: 0.015,
 		nft: "main",
 		descriptionPage: `The Remarkable Women Collection, reimagined to honor Ukrainian women,
 							who are fighting on the front lines, providing care for others, and trying
@@ -13,10 +14,11 @@ export const dataSource = [
 		image: require('@/assets/img/nft-page/remarkable_ukrainian.png'),
 	},
 	{
+		id: 2,
 		slug: 'world-of-ukrainian-women',
 		title: "World of Ukrainian Women",
 		description: `Derived from World of </br>Women #4865 </br>Limited edition of 1000`,
-		price: "0.03 ETH",
+		price: 0.03,
 		nft: "main",
 		descriptionPage: `An NFT derived from the incredible WOW collection. The world of Ukrainan
 							women today is a warzone. This honors the brave women who are joining in
@@ -26,18 +28,43 @@ export const dataSource = [
 		image: require('@/assets/img/nft-page/world_of_ukrainian_women.png'),
 	},
 	{
-		slug: 'zelensky-punk',
-		title: "Zelensky Punk",
-		description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
-		price: "0.06 ETH",
+		id: 3,
+		slug: 'gopnik',
+		title: "Ukrainian Gopnik",
+		description: `Derived from Doodles </br>#2519 </br>Limited edition of 1000`,
+		price: 0.03,
 		nft: "main",
-		descriptionPage: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors
-							all the Ukranian people who have found even the most makeshift ways to join
-							the fight for their coountry’s freedom.`,
-		quantity: 300,
+		descriptionPage: `Legend has it couple of Gopniks snatched a russian ICV near Kyiv without even having a gun`,
+		quantity: 1000,
 		donatedBy: '@jundoima',
-		image: require('@/assets/img/nft-page/fuck.png'),
+		image: require('@/assets/img/nft-page/gopnik.png'),
 	},
+	{
+		id: 4,
+		slug: 'torrent',
+		title: "Torrent",
+		description: `Derived from CoolCats </br>#8847 </br>Limited edition of 1000`,
+		price: 0.03,
+		nft: "main",
+		descriptionPage: `Pirate cat that told that that showed russian warship the way`,
+		quantity: 1000,
+		donatedBy: '@jundoima',
+		image: require('@/assets/img/nft-page/torrent.png'),
+	},
+	// {
+	// 	id: 4,
+	// 	slug: 'zelensky-punk',
+	// 	title: "Zelensky Punk",
+	// 	description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
+	// 	price: "0.06 ETH",
+	// 	nft: "main",
+	// 	descriptionPage: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors
+	// 						all the Ukranian people who have found even the most makeshift ways to join
+	// 						the fight for their coountry’s freedom.`,
+	// 	quantity: 300,
+	// 	donatedBy: '@jundoima',
+	// 	image: require('@/assets/img/nft-page/fuck.png'),
+	// },
 	{
 		slug: 'coming_soon',
 		title: "Coming soon",

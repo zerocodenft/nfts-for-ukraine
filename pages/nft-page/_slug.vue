@@ -98,7 +98,7 @@
 					justify-content-center
 					align-items-end
 				">
-				<div class="nft-page__price pt-4 mb-4 mb-md-5">{{ nft.price }}</div>
+				<div class="nft-page__price pt-4 mb-4 mb-md-5">{{ nft.price }} ETH</div>
 				<div class='d-flex w-100 justify-content-center d-md-block'>
 					<img :src="nft.image" alt="nft" class='nft-page__main-image'/>
 				</div>
@@ -139,22 +139,21 @@ export default {
 			address,
 		} = this.$siteConfig.smartContract
 
-		// try {
-		// 	// give some time for wallet plugin to init
-		// 	setTimeout(async () => {
-		// 		if (!this.$wallet.provider) return
+		try {
+			// give some time for wallet plugin to init
+			setTimeout(async () => {
+				if (!this.$wallet.provider) return
 
-		// 		if (this.$wallet.chainId !== targetChainId) {
-		// 			await this.$wallet.switchNetwork(targetChainId)
-		// 		}
+				if (this.$wallet.chainId !== targetChainId) {
+					await this.$wallet.switchNetwork(targetChainId)
+				}
 
-		// 		const nftContract = new ethers.Contract(address, abi, this.$wallet.provider)
-		// 		this.mintedCount = +(await nftContract.totalSupply())
-		// 		this.collectionSize = +(await nftContract.COLLECTION_SIZE())
-		// 	}, 2000)
-		// } catch (err) {
-		// 	console.error({ err })
-		// }
+				const nftContract = new ethers.Contract(address, abi, this.$wallet.provider)
+				this.mintedCount = +(await nftContract.mintedCount(this.nft.id))
+			}, 2000)
+		} catch (err) {
+			console.error({ err })
+		}
 	},
 	methods: {
 		async onMint() {
@@ -180,6 +179,20 @@ export default {
 					abi,
 					this.$wallet.provider.getSigner()
 				)
+
+				const value = (this.count * this.nft.price).toString()
+				// console.log(this.count, this.nft.price, value)
+				const tx = await signedContract.mint(this.count, this.nft.id, {
+					value: ethers.utils.parseEther(value)
+				})
+
+				console.log({tx})
+
+				// TODO: show some notification or thank you modal window
+
+				tx.wait().then(res => {
+					this.mintedCount += this.count
+				})
 			} catch (err) {
 				console.error({ err })
 			} finally {
