@@ -45,7 +45,7 @@
 							:key='index'
 							:title='nft.title'
 							:description='nft.descriptionPage'
-							:url="`https://apeinforukraine.com/nft-page/${nft.slug}`"
+							url="https://apeinforukraine.com"
 						>
 							<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
 						</ShareSocial>

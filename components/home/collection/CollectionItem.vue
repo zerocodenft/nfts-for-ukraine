@@ -50,7 +50,7 @@
 								:key='index'
 								:title='collection.title'
 								:description='collection.description'
-								:url='`https://apeinforukraine.com/nft-page/${collection.slug}`'
+								url='https://apeinforukraine.com'
 							>
 								<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
 							</ShareSocial>
