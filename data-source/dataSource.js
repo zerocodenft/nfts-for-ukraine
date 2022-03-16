@@ -36,7 +36,7 @@ export const dataSource = [
 		nft: "main",
 		descriptionPage: `Legend has it couple of Gopniks snatched a russian ICV near Kyiv without even having a gun`,
 		quantity: 1000,
-		donatedBy: '@jundoima',
+		donatedBy: '@mozying',
 		image: require('@/assets/img/nft-page/gopnik.png'),
 	},
 	{
@@ -48,7 +48,7 @@ export const dataSource = [
 		nft: "main",
 		descriptionPage: `Pirate cat that told that that showed russian warship the way`,
 		quantity: 1000,
-		donatedBy: '@jundoima',
+		donatedBy: '@mozying',
 		image: require('@/assets/img/nft-page/torrent.png'),
 	},
 	// {
