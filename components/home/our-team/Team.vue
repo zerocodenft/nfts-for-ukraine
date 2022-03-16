@@ -111,7 +111,7 @@ export default {
 
 	&__list{
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 3.5rem;
 		@media(max-width: 879px){
 			grid-template-columns: repeat(3, 1fr);
