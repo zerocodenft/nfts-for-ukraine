@@ -21,7 +21,11 @@
 			</div>
 		</div>
 		<div>
-			<img class='welcome-page__image' :src='require("@/assets/img/card-group.svg")' alt='welcome-cards' />
+			<picture>
+				<source :srcset='require("assets/img/card-group.webp")' type="image/webp">
+				<source :srcset='require("assets/img/card-group.png")' type="image/png">
+				<img class='welcome-page__image' :src='require("assets/img/card-group.png")' alt='welcome-cards' />
+			</picture>
 		</div>
 	</div>
 </template>

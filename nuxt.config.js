@@ -6,6 +6,8 @@ const {
 } = process.env
 const siteConfig = require('./siteConfig.json')
 
+const {dataSource} = require('./data-source/dataSource')
+
 const { title, description, url, iconName } = siteConfig
 
 export default {
@@ -90,8 +92,23 @@ export default {
 			priority: 1,
 			lastmod: new Date(),
 		},
+		filter ({ routes }) {
+			return routes.map(route => {
+				return route.url === '/' ? {...route, priority: 1} :  {...route, priority: 0.9}
+			})
+		}
 	},
-
+	generate: {
+		crawler: false,
+		fallback: true,
+		routes() {
+			const allCasesRoutes = [];
+			dataSource.forEach(data => {
+				allCasesRoutes.push(`/nft-pages/${data.slug}`);
+			})
+			return allCasesRoutes;
+		},
+	},
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {}
 }

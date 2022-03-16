@@ -11,7 +11,7 @@ export const dataSource = [
 							to get their children and loved ones to safety. Mint limit is 10.`,
 		quantity: 1000,
 		donatedBy: '@Snowratcrash',
-		image: require('@/assets/img/nft-page/remarkable_ukrainian.png'),
+		image: 'remarkable_ukrainian',
 	},
 	{
 		id: 2,
@@ -25,7 +25,7 @@ export const dataSource = [
 							the fight for their freedom. Mint Limit is 10.`,
 		quantity: 1000,
 		donatedBy: '@Snowratcrash',
-		image: require('@/assets/img/nft-page/world_of_ukrainian_women.png'),
+		image: 'world_of_ukrainian_women',
 	},
 	{
 		id: 3,
@@ -37,7 +37,7 @@ export const dataSource = [
 		descriptionPage: `Legend has it couple of Gopniks snatched a russian ICV near Kyiv without even having a gun`,
 		quantity: 1000,
 		donatedBy: '@mozying',
-		image: require('@/assets/img/nft-page/gopnik.png'),
+		image: 'gopnik',
 	},
 	{
 		id: 4,
@@ -49,7 +49,7 @@ export const dataSource = [
 		descriptionPage: `Pirate cat that told that that showed russian warship the way`,
 		quantity: 1000,
 		donatedBy: '@mozying',
-		image: require('@/assets/img/nft-page/torrent.png'),
+		image: 'torrent',
 	},
 	{
 		id: 5,
@@ -63,7 +63,7 @@ export const dataSource = [
 							the fight for their coountry’s freedom.`,
 		quantity: 300,
 		donatedBy: '@jundoima',
-		image: require('@/assets/img/nft-page/zelensky-punk.png'),
+		image: 'zelensky-punk',
 	},
 	// {
 	// 	slug: 'coming_soon',

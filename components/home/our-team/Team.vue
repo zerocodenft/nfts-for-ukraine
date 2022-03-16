@@ -31,7 +31,7 @@ export default {
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/ibodnarchuk/',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/Ihor1.png')
+					photo: 'Ihor1',
 				},
 				{
 					firstName: 'Mykhailo',
@@ -40,7 +40,7 @@ export default {
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/mykhailo-diakovych/',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/Mikhailo.png')
+					photo: 'Mikhailo',
 				},
 				{
 					firstName: 'Serge',
@@ -49,7 +49,7 @@ export default {
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/skhaiba/',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/Serge.png')
+					photo: 'Serge',
 				},
 				{
 					firstName: 'Anna',
@@ -58,7 +58,7 @@ export default {
 					social: 'twitter',
 					url: 'https://twitter.com/anna_gandrabura',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/Anna.png')
+					photo: 'Anna',
 				},
 				{
 					firstName: 'Igor',
@@ -67,7 +67,7 @@ export default {
 					social: 'linkedIn',
 					url: '#',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/Ihor.png')
+					photo: 'Ihor',
 				},
 				{
 					firstName: 'Sarah',
@@ -76,7 +76,7 @@ export default {
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/sarahnohe/',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/Sarah.png')
+					photo: 'Sarah',
 				},
 				{
 					firstName: 'quasi Digi',
@@ -85,7 +85,7 @@ export default {
 					social: 'twitter',
 					url: 'https://twitter.com/quasidigi',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/QuasiDigi.png')
+					photo: 'QuasiDigi',
 				},
 				{
 					firstName: 'William',
@@ -94,7 +94,7 @@ export default {
 					social: 'linkedIn',
 					url: 'https://linkedin.com/in/bywilliamfreedman/',
 					rotate: '0',
-					photo: require('@/assets/img/home/team/William.png')
+					photo: 'William',
 				},
 			]
 		}
