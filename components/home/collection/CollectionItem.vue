@@ -5,7 +5,7 @@
 				<b-col class='py-3'>
 					<router-link :class="{'bocked': collection.placeholder}" :to="`/nft-page/${collection.slug}`">
 						<b-img :class="['w-100 h-100', collection.placeholder && 'blurred']" :src="collection.image" />
-						<span v-if='!collection.placeholder' class='text-white position-absolute collection-items-wrapper__card__nft-price text-nowrap p-3'>{{collection.price}}</span>
+						<span v-if='!collection.placeholder' class='text-white position-absolute collection-items-wrapper__card__nft-price text-nowrap p-3'>{{collection.price}} ETH</span>
 					</router-link>
 				</b-col>
 			</b-row>

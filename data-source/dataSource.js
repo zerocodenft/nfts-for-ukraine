@@ -74,7 +74,7 @@ export const dataSource = [
 		price: "",
 		nft: "coming-soon",
 		donatedBy: "",
-		image: require(`@/assets/img/nft-page/nft.svg`),
+		image: require(`@/assets/img/nft-page/coming-soon.svg`),
 		placeholder: true
 	}
 ]
