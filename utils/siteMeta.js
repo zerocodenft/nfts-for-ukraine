@@ -1,7 +1,7 @@
 const type = "website";
-const url = "https://zerocodenft.com";
+const url = "https://apeinforukraine.com";
 const title = "Ape in For Ukraine";
-const description = "Another drop powered by Zero Code NFT";
+const description = "Join people around the world in using the power of cryptocurrency to undermine Putin’s efforts of destruction";
 const mainImage = "https://apeinforukraine/img/zerocodenftlogo_dark.svg";
 const twitterCard = "summary_large_image";
 
