@@ -51,30 +51,30 @@ export const dataSource = [
 		donatedBy: '@mozying',
 		image: require('@/assets/img/nft-page/torrent.png'),
 	},
-	// {
-	// 	id: 4,
-	// 	slug: 'zelensky-punk',
-	// 	title: "Zelensky Punk",
-	// 	description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
-	// 	price: "0.06 ETH",
-	// 	nft: "main",
-	// 	descriptionPage: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors
-	// 						all the Ukranian people who have found even the most makeshift ways to join
-	// 						the fight for their coountry’s freedom.`,
-	// 	quantity: 300,
-	// 	donatedBy: '@jundoima',
-	// 	image: require('@/assets/img/nft-page/fuck.png'),
-	// },
 	{
-		slug: 'coming_soon',
-		title: "Coming soon",
-		description: "",
-		descriptionPage: "",
-		quantity: 0,
-		price: "",
-		nft: "coming-soon",
-		donatedBy: "",
-		image: require(`@/assets/img/nft-page/coming-soon.svg`),
-		placeholder: true
-	}
+		id: 5,
+		slug: 'zelensky-punk',
+		title: "Zelensky Punk",
+		description: `Derived from CryptoPunk </br>#7743 </br>Limited edition of 300`,
+		price: 0.06,
+		nft: "main",
+		descriptionPage: `Derived from an OG CryptoPunk. This NFT represents Zelensky, and honors
+							all the Ukranian people who have found even the most makeshift ways to join
+							the fight for their coountry’s freedom.`,
+		quantity: 300,
+		donatedBy: '@jundoima',
+		image: require('@/assets/img/nft-page/zelensky-punk.png'),
+	},
+	// {
+	// 	slug: 'coming_soon',
+	// 	title: "Coming soon",
+	// 	description: "",
+	// 	descriptionPage: "",
+	// 	quantity: 0,
+	// 	price: "",
+	// 	nft: "coming-soon",
+	// 	donatedBy: "",
+	// 	image: require(`@/assets/img/nft-page/coming-soon.svg`),
+	// 	placeholder: true
+	// }
 ]
