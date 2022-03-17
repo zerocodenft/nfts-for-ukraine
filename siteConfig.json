@@ -18,7 +18,7 @@
 	"smartContract": {
 		"name": "ApeInForUkraine",
 		"symbol": "APEUA",
-		"address": "0x4B61341268220D9cDB6956613E0EAaBddd99D422",
+		"address": "0xd075571F1BA5069F77759981b0319dE63a56616d",
 		"collectionSize": 10000,
 		"maxTokensPerTransaction": 10,
 		"mintPrice": 0,
@@ -263,7 +263,12 @@
 							},
 							{
 								"internalType": "string",
-								"name": "uri",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "imageUri",
 								"type": "string"
 							}
 						],
