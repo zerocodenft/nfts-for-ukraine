@@ -1,45 +1,53 @@
 <template>
-	<div id="header" class="header nft-container w-100 z-index-1 position-sticky pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
-		<b-navbar class="header__container mx-auto px-0 w-100 z-index-1 d-flex align-items-center" toggleable="lg" type="dark">
-			<b-navbar-brand class="header__brand mt-md-1" to="/">
-				<div class=" mr-xl-5">
-					<b-img src='@/assets/img/logos/logo.svg' />
-				</div>
-			</b-navbar-brand>
-			<b-navbar-toggle
-				class="header__container__toggle bg-transparent p-0 mt-2"
-				target="nav-collapse"
-			>
-				<div class="d-flex flex-column justify-content-between align-items-end position-relative">
-					<span class='d-block'></span>
-					<span class='d-block'></span>
-					<span class='d-block'></span>
-				</div>
-			</b-navbar-toggle>
-			<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
-				<b-navbar-nav class=" d-flex justify-content-center align-items-center">
-					<b-nav-item
-						v-for="headerItem in headerItems"
-						:key="headerItem.id"
-						class="header__link shadow-none text-nowrap"
-						link-classes="font-weight-bolder"
-						:to="`/${headerItem.id}`"
-						@click.passive="scrollToContent(headerItem.id)"
-					>
-						{{ headerItem.title }}
-						<span>{{ headerItem.title }}</span>
-					</b-nav-item>
-				</b-navbar-nav>
-				<div class="d-flex justify-content-center z-index-1 order-1">
-					<b-button to="/#partner" class="brand-button d-flex align-items-center justify-content-center">Partner With Us</b-button>
-				</div>
-			</b-collapse>
-		</b-navbar>
-	</div>
+	<header class="header z-index-1 position-sticky">
+		<div id="header" class="nft-container w-100 pt-sm-4 d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-between overflow-hidden">
+			<b-navbar class="header__container mx-auto px-0 pb-3 w-100 z-index-1 d-flex align-items-center" toggleable="lg" type="dark">
+				<b-navbar-brand class="header__brand mt-md-1" to="/">
+					<div class=" mr-xl-5">
+						<b-img src='@/assets/img/logos/logo.svg' />
+					</div>
+				</b-navbar-brand>
+				<b-navbar-toggle
+					class="header__container__toggle bg-transparent p-0 mt-2"
+					target="nav-collapse"
+				>
+					<div class="d-flex flex-column justify-content-between align-items-end position-relative">
+						<span class='d-block'></span>
+						<span class='d-block'></span>
+						<span class='d-block'></span>
+					</div>
+				</b-navbar-toggle>
+				<b-collapse id="nav-collapse" class="justify-content-between align-items-center" is-nav>
+					<b-navbar-nav class=" d-flex justify-content-center align-items-center">
+						<b-nav-item
+							v-for="headerItem in headerItems"
+							:key="headerItem.id"
+							class="header__link shadow-none text-nowrap"
+							link-classes="font-weight-bolder"
+							:to="`/${headerItem.id}`"
+							@click.passive="scrollToContent(headerItem.id)"
+						>
+							{{ headerItem.title }}
+							<span>{{ headerItem.title }}</span>
+						</b-nav-item>
+					</b-navbar-nav>
+					<div class="d-flex justify-content-center z-index-1 order-1">
+						<b-button
+							class="brand-button d-flex align-items-center justify-content-center"
+							@click="scrollToContent('#partner')"
+							to="/#partner"
+						>
+							Partner With Us
+						</b-button>
+					</div>
+				</b-collapse>
+			</b-navbar>
+		</div>
+	</header>
 </template>
 
 <script>
-const SCROLL_OFFSET = 75
+const SCROLL_OFFSET = 115
 export default {
 	name: 'Header',
 	data: () => ({
@@ -77,21 +85,22 @@ export default {
 	top: 0;
 	left: 0;
 	right: 0;
-	background: transparent;
-	&:before {
-		content: '';
-		background: url("../../assets/img/header-bg-frame.svg");
-		position: fixed;
-		width: 100vw;
-		height: 105px;
-		left: 0;
-		top: 0;
-		@media (max-width: 600px) {
-			height: 78px !important;
-		}
-	}
-
+	background: url("../../assets/img/header-bg-frame.svg");
 	&__container {
+		position: relative;
+		@media (min-width: 576px) {
+			padding-bottom: 2.7rem !important;
+		}
+		&:after{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 2px;
+			background: black;
+			border-radius: 1rem;
+		}
 		&__toggle {
 			& > div {
 				height: 17px;
@@ -166,21 +175,6 @@ export default {
 	.navbar {
 		&-toggler {
 			background: $brand-primary;
-		}
-
-		&-collapse {
-			position: relative;
-
-			&::before {
-				content: "";
-				position: absolute;
-				height: 100%;
-				width: 106%;
-				left: -3%;
-				top: 0;
-				background: url("../../assets/img/header-bg-frame.svg");
-				z-index: -1;
-			}
 		}
 	}
 }

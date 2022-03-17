@@ -45,7 +45,7 @@
 							:key='index'
 							:title='nft.title'
 							:description='nft.descriptionPage'
-							:url="`https://apeinforukraine.com/nft-page/${nft.slug}`"
+							url="https://apeinforukraine.com"
 						>
 							<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
 						</ShareSocial>
@@ -100,7 +100,22 @@
 				">
 				<div class="nft-page__price pt-4 mb-4 mb-md-5">{{ nft.price }} ETH</div>
 				<div class='d-flex w-100 justify-content-center d-md-block'>
-					<img :src="nft.image" alt="nft" class='nft-page__main-image'/>
+					<picture>
+						<source
+							class='nft-page__main-image'
+							:srcset="require(`@/assets/img/nft-page/${nft.image}.webp`)"
+							type="image/webp"
+						>
+						<source
+							class='nft-page__main-image'
+							:srcset="require(`@/assets/img/nft-page/${nft.image}.png`)"
+							type="image/png"
+						>
+						<b-img
+							class='nft-page__main-image'
+							:src="require(`@/assets/img/nft-page/${nft.image}.png`)"
+						/>
+					</picture>
 				</div>
 			</div>
 		</div>

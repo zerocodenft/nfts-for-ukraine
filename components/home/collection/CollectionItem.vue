@@ -4,7 +4,22 @@
 			<b-row class='no-gutter flex-column px-3'>
 				<b-col class='py-3'>
 					<router-link :class="{'bocked': collection.placeholder}" :to="`/nft-page/${collection.slug}`">
-						<b-img :class="['w-100 h-100', collection.placeholder && 'blurred']" :src="collection.image" />
+						<picture>
+							<source
+								:class="['w-100 h-100', collection.placeholder && 'blurred']"
+								:srcset="require(`@/assets/img/nft-page/${collection.image}.webp`)"
+								type="image/webp"
+							>
+							<source
+								:class="['w-100 h-100', collection.placeholder && 'blurred']"
+								:srcset="require(`@/assets/img/nft-page/${collection.image}.png`)"
+								type="image/png"
+							>
+							<b-img
+								:class="['w-100 h-100', collection.placeholder && 'blurred']"
+								:src="require(`@/assets/img/nft-page/${collection.image}.png`)"
+							/>
+						</picture>
 						<span v-if='!collection.placeholder' class='text-white position-absolute collection-items-wrapper__card__nft-price text-nowrap p-3'>{{collection.price}} ETH</span>
 					</router-link>
 				</b-col>
@@ -35,7 +50,7 @@
 								:key='index'
 								:title='collection.title'
 								:description='collection.description'
-								:url='`https://apeinforukraine.com/nft-page/${collection.slug}`'
+								url='https://apeinforukraine.com'
 							>
 								<img :src="require(`@/assets/img/social-media/${network}.svg`)" :alt="network">
 							</ShareSocial>
